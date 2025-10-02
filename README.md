@@ -47,6 +47,26 @@ Este repositório contém scripts SQL para automação e manutenção do sistema
   - Atualiza a sequência correspondente
 - **Uso:** Correção de problemas de sequência após importação de dados ou restauração de backup
 
+### 📦 `Bremen/Listar_prod.sql`
+**Descrição:** Consultas para análise de produtos e componentes do sistema Bremen/Wingraph
+- **Função:** Conjunto de queries para exploração e análise do catálogo de produtos
+- **Tabelas consultadas:**
+  - `modmodeloproduto` - Modelos de produtos cadastrados
+  - `modcomponente` - Componentes dos modelos
+  - `modcomponentegraf` - Componentes gráficos
+  - `estitemestoquesubstrato` - Itens de estoque de substratos
+  - `estitemsubstratoimpressao` - Substratos para impressão
+  - `caracteristicaproduto` - Características dos produtos
+  - Outras tabelas relacionadas (tarefas auxiliares, grupos)
+- **Consultas incluídas:**
+  1. Listagem de estrutura de tabelas (colunas e tipos)
+  2. Consulta de características de produtos
+  3. Consulta detalhada de componentes
+  4. Consulta de modelos de produtos com todas as propriedades
+  5. JOIN completo entre componentes e modelos
+  6. Consulta de substratos de impressão com especificações técnicas
+- **Uso:** Análise de produtos, levantamento de estruturas, auditoria de catálogo
+
 ---
 
 ## 🔧 Como Usar
@@ -78,4 +98,6 @@ Este repositório contém scripts SQL para automação e manutenção do sistema
 
 ## 📞 Suporte
 
-**Última atualização:** 29 de setembro de 2025
+Para dúvidas ou problemas com os scripts, entre em contato com a equipe de desenvolvimento.
+
+**Última atualização:** 2 de outubro de 2025
