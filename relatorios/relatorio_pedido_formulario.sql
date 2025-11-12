@@ -1,3 +1,11 @@
+-- BUSCA TODOS OS IDS DOS FORMULARIOS NO PERIODO DE 01/10/2025 A 31/10/2025 TIPO APOGEU
+select id from FORMULARIOS 
+where criado_em >= '2025-10-01 01:12:33.167'
+and criado_em <= '2025-10-31 23:59:33.167' 
+and tipo_formulario = 'Apogeu'
+group by id
+
+-- RELATÓRIO DE PEDIDOS DE FORMULÁRIOS TIPO APOGEU
 SELECT
   f.id AS formulario_id,
   f.nome AS responsavel_nome,

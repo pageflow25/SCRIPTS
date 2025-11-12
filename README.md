@@ -38,6 +38,30 @@ Este repositório contém scripts SQL para automação e manutenção do sistema
   - Quantidade total calculada
 - **Uso:** Integração com sistemas externos e dashboards
 
+### 🧾 `relatorio_pedido_formulario.sql`
+**Descrição:** Gera relatório detalhado de pedidos para um conjunto de formulários (ex.: filtrado por tipo e período)
+- **Função:** Produz um relatório relacional que combina informações do formulário, arquivos PDF associados, especificações técnicas e distribuição por unidade escolar. O script busca IDs de formulários (pode usar lista fixa ou filtro por período/tipo) e retorna os detalhes de cada item pedido.
+- **Campos retornados (principais):**
+  - `formulario_id` — ID do formulário
+  - `responsavel_nome` — nome do responsável pelo formulário
+  - `tipo_formulario` — tipo do formulário (ex.: Apogeu)
+  - `titulo` — título do pedido/formulário
+  - `status_formulario_id` — status do pedido (o script contém um CASE que mapeia alguns IDs para texto como "pedido recebido", "pedido cancelado", "pedido teste")
+  - `criado_em` — data/hora de criação do formulário
+  - `nome_pdf`, `paginas` — nome e número de páginas do PDF associado
+  - `formato_final`, `gramatura`, `cor_impressao`, `impressao`, `acabamento` — especificações técnicas do item pedido
+  - `unidade` — nome da unidade escolar de destino
+  - `quantidade` — quantidade distribuída por unidade
+- **Comportamento:** O relatório faz LEFT JOIN entre `formularios`, `arquivo_pdfs`, `especificacoes_form`, `distribuicao_materiais` e `unidades_escolares`. Possui uma cláusula WHERE que aceita uma lista de `f.id` (IDs de formulários) e ordena por `ap.id, ue.nome`.
+- **Uso recomendado:**
+  - Teste em ambiente de desenvolvimento antes de rodar em produção.
+  - Ajuste a cláusula WHERE (substituindo a lista de IDs por filtros de data/tipo) para obter apenas os formulários desejados.
+  - Útil para auditoria de pedidos e inspeção dos itens/arquivos anexos.
+- **Cuidados:**
+  - Pode retornar muitas linhas dependendo do número de PDFs e unidades (atenção a performance).
+  - A cláusula de mapeamento de `status_formulario_id` converte alguns códigos para texto e mantém outros como texto literal; revise se precisar de outros mapeamentos.
+  - Sempre fazer backup e validar filtros antes de usar em relatórios que serão exportados ou enviados.
+
 ### 🔄 `reset_id_banco.sql`
 **Descrição:** Redefine sequências de IDs automáticos no banco
 - **Função:** Ajusta todas as sequências de ID para o próximo valor disponível
