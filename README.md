@@ -91,6 +91,43 @@ Este repositório contém scripts SQL para automação e manutenção do sistema
   6. Consulta de substratos de impressão com especificações técnicas
 - **Uso:** Análise de produtos, levantamento de estruturas, auditoria de catálogo
 
+### 🤖 `Retorna Produtos Bremen` (Python)
+**Descrição:** Ferramenta Python para consultar características de produtos via API e exportar o resultado para JSON.
+- **Arquivos na pasta:**
+  - `app.py` — script que lê IDs de um arquivo Excel, consulta a API interna e salva `caracteristicas_produtos.json`.
+  - `caracteristicas_produtos.json` — exemplo de saída com estrutura de `id_cliente`, `itens` e `componentes`.
+- **Dependências:**
+  - Python 3.8+ (recomendado)
+  - Bibliotecas: `requests`, `pandas`, `openpyxl` (para ler arquivos Excel)
+  - Sugestão de instalação: `pip install requests pandas openpyxl`
+- **Configuração e uso:**
+  1. Copie o Excel com os IDs (ex.: `Produtos Bremen - PageFlow (1).xlsx`) para a pasta ou atualize `EXCEL_PATH` no `app.py` com o caminho correto.
+ 2. Ajuste `COLUNA_ID` para a coluna que contém os IDs (pode ser letra como `N` ou nome de cabeçalho).
+ 3. Substitua o `TOKEN` e `URL_BASE` se necessário (o `TOKEN` é sensível — mantenha-o privado).
+ 4. Execute o script a partir do PowerShell:
+
+```powershell
+cd "c:\Users\CDG\Desktop\SISTEMAS\SCRIPTS\Retorna Produtos Bremen"
+python .\app.py
+```
+
+- **O que o script faz:**
+  - Lê cada linha do Excel e normaliza o ID (converte `86.0` → `86`), pulando células vazias.
+  - Faz requisições GET para `URL_BASE` com parâmetros (`id`, `origem`) e headers (`token`, `Authorization`).
+  - Tries retries on 401 (3 attempts), rate limits the requests via time.sleep(0.3).
+  - Salva o resultado em `caracteristicas_produtos.json` no formato `records`.
+- **Formato do JSON de saída (exemplo):**
+  - `identifier` — identificador da aplicação (ex.: `PageFlow`)
+  - `data`:
+    - `id_cliente`, `id_vendedor`, `id_forma_pagamento`
+    - `itens` — array de itens com `id`, `descricao`, `quantidade` e `componentes`
+    - Cada `componente` pode conter `altura`, `largura`, `perguntas_componente` e campos adicionais como `quantidade_paginas` e `gramaturasubstratoimpressao`.
+- **Cuidados e notas:**
+  - Mantenha o `TOKEN` seguro; não comite tokens em repositórios públicos.
+  - Ajuste `time.sleep` se o servidor rejeitar por requisições rápidas.
+  - Se encontrar erros de leitura do Excel, confirme que o caminho/coluna estão corretos e que o Excel não está aberto por outro processo.
+
+
 ---
 
 ## 🔧 Como Usar
