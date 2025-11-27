@@ -1,0 +1,71 @@
+{
+    "identifier": "PageFlow", -- variavel fixa que nao esta no banco de dados
+    "data": {
+        "id_cliente": 354,  -- vai pegar da tabela, 'unidade_escolar' com a coluna 'cliente_id'
+        "id_vendedor": 3, -- variavel fixa que nao esta no banco de dados
+        "id_forma_pagamento": "1",  -- vai pegar da tabela, 'unidade_escolar' com a coluna 'forma_pagamento'
+        "itens": [
+            {
+            "id": 85, -- vai pegar da tabela, 'especificacoes_form' com a coluna 'id_produto'
+            "descricao": "Apostila CD Espiral", -- vai pegar da tabela, 'bremen_itens' com a coluna 'descricao'
+            "quantidade": 10, -- vai pegar da tabela, 'distribuicao_materiais' com a coluna 'quantidade'
+            "componentes": [
+                {
+                    "id": 218, -- vai pegar da tabela, 'arquivo_pdf' com a coluna 'id_componente'
+                    "descricao": "Capa", -- vai pegar da tabela, 'bremen_componentes' com a coluna 'descricao'
+                    "altura": 21, -- vai pegar da tabela, 'especificoes_form' com a coluna 'altura'
+                    "largura": 28,  -- vai pegar da tabela, 'especificoes_form' com a coluna 'largura'
+                    "perguntas_componente": [
+                        {
+                            "id_pergunta": 3, -- vai pegar da tabela, 'bremen_especificacao_detalhes' com a coluna 'pergunta_id'
+                            "pergunta": "Laminação ?", -- vai pegar da tabela, 'bremen_perguntas' com a coluna 'nome'
+                            "tipo": "Opções",  -- vai pegar da tabela, 'bremen_perguntas' com a coluna 'tipo'
+                            "resposta": "Frente" -- vai pegar da tabela, 'bremen_respotas' com a coluna 'valor' porem usando a tabela 'bremen_especificacao_detalhes' para ver a resposta do usuário, pois nessa tabela vai salvar o id da resposta 'resposta_id'
+                        },
+                        {
+                            "id_pergunta": 4, -- vai pegar da tabela, 'bremen_perguntas' com a coluna 'id_pergunta'
+                            "pergunta": "Tipo BOPP?", -- vai pegar da tabela, 'bremen_perguntas' com a coluna 'nome'
+                            "tipo": "Opções",  -- vai pegar da tabela, 'bremen_perguntas' com a coluna 'tipo'
+                            "resposta": "B" -- vai pegar da tabela, 'bremen_respotas' com a coluna 'valor' porem usando a tabela 'bremen_especificacao_detalhes' para ver a resposta do usuário, pois nessa tabela vai salvar o id da resposta 'resposta_id'
+                        }
+                    ]
+                },
+                {
+                    "id": 219, -- vai pegar da tabela, 'bremen_componentes' com a coluna 'id_componente'
+                    "descricao": "Miolo da Apostila", -- vai pegar da tabela, 'bremen_componentes' com a coluna 'descricao'
+                    "altura": 21, -- vai pegar da tabela, 'especificoes_form' com a coluna 'altura'
+                    "largura": 28,  -- vai pegar da tabela, 'especificoes_form' com a coluna 'largura'
+                    "perguntas_componente": [
+                        {
+                            "id_pergunta": 21, -- vai pegar da tabela, 'bremen_perguntas' com a coluna 'id_pergunta'
+                            "pergunta": "Cor do Espiral?", -- vai pegar da tabela, 'bremen_perguntas' com a coluna 'nome'
+                            "tipo": "Opções",  -- vai pegar da tabela, 'bremen_perguntas' com a coluna 'tipo'
+                            "resposta": "P" -- vai pegar da tabela, 'bremen_respotas' com a coluna 'valor' porem usando a tabela 'bremen_especificacao_detalhes' para ver a resposta do usuário, pois nessa tabela vai salvar o id da resposta 'resposta_id'
+                        },
+                        {
+                            "id_pergunta": 37, -- vai pegar da tabela, 'bremen_perguntas' com a coluna 'id_pergunta'
+                            "pergunta": "Borda de Encadernação?", -- vai pegar da tabela, 'bremen_perguntas' com a coluna 'nome'
+                            "tipo": "Opções",  -- vai pegar da tabela, 'bremen_perguntas' com a coluna 'tipo'
+                            "resposta": "Borda Maior" -- vai pegar da tabela, 'bremen_respotas' com a coluna 'valor' porem usando a tabela 'bremen_especificacao_detalhes' para ver a resposta do usuário, pois nessa tabela vai salvar o id da resposta 'resposta_id'
+                        }
+                    ],
+                    "quantidade_paginas": 200, -- vai pegar da tabela, 'arquivo_pdfs' com a coluna 'paginas'
+                    "gramaturasubstratoimpressao": 75  -- vai pegar da tabela, 'especificoes_form' com a coluna 'gramatura_miolo'
+                },
+                {
+                    "id": 220, -- vai pegar da tabela, 'bremen_componentes' com a coluna 'id_componente'
+                    "descricao": "Papelão", -- vai pegar da tabela, 'bremen_componentes' com a coluna 'descricao'
+                    "altura": 21, -- vai pegar da tabela, 'especificoes_form' com a coluna 'altura'
+                    "largura": 28  -- vai pegar da tabela, 'especificoes_form' com a coluna 'largura'
+                },
+                {
+                    "id": 221, -- vai pegar da tabela, 'bremen_componentes' com a coluna 'id_componente'
+                    "descricao": "Guarda", -- vai pegar da tabela, 'bremen_componentes' com a coluna 'descricao'
+                    "altura": 21, -- vai pegar da tabela, 'especificoes_form' com a coluna 'altura'
+                    "largura": 28  -- vai pegar da tabela, 'especificoes_form' com a coluna 'largura'
+                }
+            ]
+        }
+        ]
+    }
+}

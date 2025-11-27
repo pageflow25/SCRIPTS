@@ -1,0 +1,112 @@
+{
+    "identifier": "PageFlow",
+    "data": {
+        "id_cliente": 354,
+        "id_vendedor": 3,
+        "id_forma_pagamento": "1",
+        "itens": [
+            {
+                "id_produto": 160,
+                "descricao": "resumo_1_1",
+                "quantidade": 24,
+                "componentes": [
+                    {
+                        "id": 389,
+                        "altura": 10.50,
+                        "largura": 14.80,
+                        "descricao": "Capa",
+                        "quantidade_paginas": 4,
+                        "perguntas_componente": [
+                            {
+                                "tipo": "Opções",
+                                "pergunta": "Laminação ?",
+                                "resposta": "F",
+                                "id_pergunta": 51
+                            },
+                            {
+                                "tipo": "Opções",
+                                "pergunta": "Tipo BOPP?",
+                                "resposta": "B",
+                                "id_pergunta": 52
+                            }
+                        ]
+                    },
+                    {
+                        "id": 390,
+                        "altura": 10.50,
+                        "largura": 14.80,
+                        "descricao": "Miolo",
+                        "quantidade_paginas": 2,
+                        "perguntas_componente": [],
+                        "gramaturasubstratoimpressao": 120.00
+                    }
+                ],
+                "perguntas_gerais": [
+                    {
+                        "id_pergunta": 109,
+                        "pergunta": "Borda de Encadernação?",
+                        "tipo": "Opções",
+                        "resposta": "1"
+                    },
+                    {
+                        "id_pergunta": 110,
+                        "pergunta": "Cor do Wire-o?",
+                        "tipo": "Opções",
+                        "resposta": "B"
+                    }
+                ]
+            },
+            {
+                "id_produto": 160,
+                "descricao": "resumo_2_1",
+                "quantidade": 24,
+                "componentes": [
+                    {
+                        "id": 389,
+                        "altura": 10.50,
+                        "largura": 14.80,
+                        "descricao": "Capa",
+                        "quantidade_paginas": 7,
+                        "perguntas_componente": [
+                            {
+                                "tipo": "Opções",
+                                "pergunta": "Laminação ?",
+                                "resposta": "F",
+                                "id_pergunta": 51
+                            },
+                            {
+                                "tipo": "Opções",
+                                "pergunta": "Tipo BOPP?",
+                                "resposta": "B",
+                                "id_pergunta": 52
+                            }
+                        ]
+                    },
+                    {
+                        "id": 390,
+                        "altura": 10.50,
+                        "largura": 14.80,
+                        "descricao": "Miolo",
+                        "quantidade_paginas": 2,
+                        "perguntas_componente": [],
+                        "gramaturasubstratoimpressao": 120.00
+                    }
+                ],
+                "perguntas_gerais": [
+                    {
+                        "id_pergunta": 109,
+                        "pergunta": "Borda de Encadernação?",
+                        "tipo": "Opções",
+                        "resposta": "1"
+                    },
+                    {
+                        "id_pergunta": 110,
+                        "pergunta": "Cor do Wire-o?",
+                        "tipo": "Opções",
+                        "resposta": "B"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,48 @@
+//escola_id = 4
+//id_produto = 195
+//data_saida = '2024-12-03'
+
+{
+    "identifier": "PageFlow",
+    "data": {
+        "id_cliente": null,
+        "id_vendedor": 3,
+        "id_forma_pagamento": "1",
+        "itens": [
+            {
+                "id": 195,
+                "descricao": "0005-b_apostila_aluno-bilingue_4aetapa-2025_3oano",
+                "quantidade": 100,
+                "componentes": [
+                    {
+                        "id": 143,
+                        "descricao": "Miolo",
+                        "altura": 29.70,
+                        "largura": 21.00,
+                        "quantidade_paginas": 115,
+                        "gramaturasubstratoimpressao": "90g",
+                        "perguntas_componente": []
+                    }
+                ],
+                "perguntas_gerais": []
+            },
+            {
+                "id": 195,
+                "descricao": "0004-a_apostila_aluno-regular_4aetapa-2025_2oano",
+                "quantidade": 100,
+                "componentes": [
+                    {
+                        "id": 143,
+                        "descricao": "Miolo",
+                        "altura": 29.70,
+                        "largura": 21.00,
+                        "quantidade_paginas": 111,
+                        "gramaturasubstratoimpressao": "90g",
+                        "perguntas_componente": []
+                    }
+                ],
+                "perguntas_gerais": []
+            }
+        ]
+    }
+}
