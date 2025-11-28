@@ -35,8 +35,14 @@ especificacoes_unidade AS (
     WHERE dm.quantidade > 0
         -- Filtro opcional por id_produto
         AND (:id_produto IS NULL OR ef.id_produto = :id_produto)
-        -- Filtro opcional por data_saida
-        AND (:data_saida IS NULL OR dm.data_saida = :data_saida)
+        -- Filtro opcional por data_saida (aceita único valor ou array)
+        AND (
+            (:datas_saida IS NOT NULL AND dm.data_saida = ANY(:datas_saida))
+            OR (
+                :datas_saida IS NULL
+                AND (:data_saida IS NULL OR dm.data_saida = :data_saida)
+            )
+        )
 ),
 
 -- Agrupa produtos: 
