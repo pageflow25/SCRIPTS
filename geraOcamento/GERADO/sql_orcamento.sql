@@ -1,30 +1,30 @@
 -- ========================================
 -- SQL FINAL - Suporta produtos COM e SEM pares
--- ========================================
--- Suporta dois tipos de produtos:
--- 1. Produtos com pares (capa + miolo) - agrupa por pares
--- 2. Produtos avulsos (sem pares) - trata individualmente
--- 
--- Parâmetros:
--- :escola_id (obrigatório) - ID da escola
--- :id_produto (opcional) - Filtrar por produto específico
--- :data_saida (opcional) - Filtrar por data de saída
+-- ATUALIZAÇÃO: Gera um JSON por cliente_id (group by)
 -- ========================================
 
-WITH unidades_filtradas AS (
+WITH parametros AS (
+    SELECT 
+        6 AS escola_id,                 -- Valor fixo para escola_id
+        176 AS id_produto,              -- Valor fixo ou NULL para trazer todos
+        ARRAY['2025-12-31', '2025-12-17']::date[] AS datas_saida -- Lista de datas ou NULL
+),
+
+unidades_filtradas AS (
     SELECT
         ue.id,
-        ue.cliente_id,
+        ue.cliente_id, -- Este campo será usado para o agrupamento final
         ue.forma_pagamento,
         ue.escola_id
     FROM unidades_escolares ue
-    WHERE ue.escola_id = :escola_id
+    CROSS JOIN parametros p
+    WHERE ue.escola_id = p.escola_id
 ),
-
 
 -- Identifica todas as especificações para as unidades da escola
 especificacoes_unidade AS (
     SELECT DISTINCT
+        uf.cliente_id, -- Propaga o cliente_id
         ef.id AS especificacao_id,
         ef.id_produto,
         COALESCE(bt.altura, NULLIF(ef.altura, '')::numeric) AS altura_mm,
@@ -40,31 +40,30 @@ especificacoes_unidade AS (
         ap.tipo_arquivo,
         ap.id_componente
     FROM unidades_filtradas uf
+    CROSS JOIN parametros p
     JOIN distribuicao_materiais dm ON dm.unidade_escolar_id = uf.id
     JOIN especificacoes_form ef ON ef.id = dm.especificacao_form_id
     LEFT JOIN bremen_gramatura bg ON bg.id = ef.id_gramatura
     LEFT JOIN bremen_tamanho_papel bt ON bt.id = ef.id_papel
     LEFT JOIN arquivo_pdfs ap ON ap.item_pedido_id = ef.id
     WHERE dm.quantidade > 0
-        -- Filtro opcional por id_produto
-        AND (:id_produto IS NULL OR ef.id_produto = :id_produto)
-        -- Filtro opcional por data_saida
-        AND (:data_saida IS NULL OR dm.data_saida = :data_saida)
+        AND (p.id_produto IS NULL OR ef.id_produto = p.id_produto)
+        AND (
+            p.datas_saida IS NULL 
+            -- CORREÇÃO: Converte o campo de texto para date antes de comparar
+            OR NULLIF(dm.data_saida, '')::date = ANY(p.datas_saida)
+        )
 ),
 
--- Agrupa produtos: 
--- Se tem pares diferentes de NULL, agrupa por pares (produtos com capa/miolo)
--- Se pares é NULL, trata como produto individual (avulso)
+-- Agrupa produtos por par/especificação E AGORA POR CLIENTE
 itens_produto AS (
     SELECT 
+        eu.cliente_id, -- Adicionado ao agrupamento
         COALESCE(eu.pares::text, eu.especificacao_id::text) AS chave_agrupamento,
         eu.pares,
         eu.formulario_id,
-        -- Para produtos com pares, pega a primeira especificação
-        -- Para avulsos, pega a única especificação
         MAX(eu.especificacao_id) AS especificacao_id,
         MAX(eu.id_produto) AS id_produto,
-        -- Nome: prioriza arquivo CAPA, depois MIOLO, por fim nome genérico
         COALESCE(
             MAX(CASE WHEN LOWER(eu.tipo_arquivo) = 'capa' 
                 THEN REPLACE(LOWER(eu.arquivo_nome), '.pdf', '') END),
@@ -77,7 +76,11 @@ itens_produto AS (
         MAX(eu.gramatura_miolo) AS gramatura_miolo,
         SUM(eu.quantidade) AS quantidade_total
     FROM especificacoes_unidade eu
-    GROUP BY COALESCE(eu.pares::text, eu.especificacao_id::text), eu.pares, eu.formulario_id
+    GROUP BY 
+        eu.cliente_id, -- Agrupa para não misturar itens de clientes diferentes
+        COALESCE(eu.pares::text, eu.especificacao_id::text), 
+        eu.pares, 
+        eu.formulario_id
 ),
 
 -- Referência das especificações para buscar componentes
@@ -97,7 +100,6 @@ itens AS (
     JOIN bremen_itens bi ON bi.id_produto = eu.id_produto
 ),
 
-
 componentes AS (
     SELECT DISTINCT
         i.pares,
@@ -111,7 +113,6 @@ componentes AS (
         ROUND(i.largura_mm::numeric / 10, 2) AS largura,
         i.gramatura_miolo,
         i.gramatura_catalogo,
-        -- Busca páginas do arquivo vinculado ao componente
         (
             SELECT ap_pag.paginas
             FROM arquivo_pdfs ap_pag
@@ -136,7 +137,6 @@ componentes AS (
        )
 ),
 
--- Respostas de componentes (por especificação)
 respostas_componentes AS (
     SELECT DISTINCT ON (c.especificacao_id, c.id_componente, bp.id)
         c.pares,
@@ -156,7 +156,6 @@ respostas_componentes AS (
     ORDER BY c.especificacao_id, c.id_componente, bp.id
 ),
 
--- Respostas gerais (por especificação)
 respostas_gerais AS (
     SELECT DISTINCT ON (i.especificacao_id, bp.id)
         i.pares,
@@ -175,17 +174,19 @@ respostas_gerais AS (
     ORDER BY i.especificacao_id, bp.id
 )
 
-
-
+-- ====================================================================
+-- SELECT FINAL: Agrupa por cliente_id
+-- ====================================================================
 SELECT json_build_object(
     'identifier', 'PageFlow',
     'data', json_build_object(
-        'id_cliente', 354,
+        'id_cliente', ip.cliente_id, -- Variável dinâmica baseada no grupo
         'id_vendedor', 3,
         'id_forma_pagamento', '1',
 
-        'itens', COALESCE((
-            SELECT json_agg(
+        -- json_agg aqui agrega as linhas de 'itens_produto' pertencentes a este cliente_id
+        'itens', COALESCE(
+            json_agg(
                 json_build_object(
                     'id_produto', ip.id_produto,
                     'descricao', ip.nome_arquivo,
@@ -280,8 +281,9 @@ SELECT json_build_object(
                     ), '[]'::json)
                 )
                 ORDER BY ip.chave_agrupamento
-            )
-            FROM itens_produto ip
-        ), '[]'::json)
+            ), '[]'::json
+        )
     )
-);
+)
+FROM itens_produto ip
+GROUP BY ip.cliente_id;
