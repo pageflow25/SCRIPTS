@@ -7,9 +7,9 @@ import re
 # ================================
 # CONFIGURAÇÕES
 # ================================
-EXCEL_PATH = r"C:\Users\CDG\Desktop\SISTEMAS\SCRIPTS\Retorna Produtos Bremen\Produtos Bremen - PageFlow (1).xlsx"         # caminho do arquivo Excel
+EXCEL_PATH = r"C:\Users\CDG\Desktop\SISTEMAS\SCRIPTS\ProdutosBremen\Produtos Bremen - PageFlow.xlsx"         # caminho do arquivo Excel
 COLUNA_ID = "N"             # nome da coluna que contém os IDs
-TOKEN = "ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SjFjM1ZoY21sdklqb2ljR0ZuWldac2IzY2lMQ0p1ZFcxbGNtOWZjMlZ5YVdVaU9pSXdNemc1TWlJc0ltVjRjQ0k2TVRjMk5ESTFPRFk1TUgwLmVvcmd0bFBEbjFHRDZOeUU5RWxpcU5WaGlENmtLcXl6dy0wcGhtYXBfenc="             # token da API
+TOKEN = "ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SjFjM1ZoY21sdklqb2ljR0ZuWldac2IzY2lMQ0p1ZFcxbGNtOWZjMlZ5YVdVaU9pSXdNemc1TWlJc0ltVjRjQ0k2TVRjMk5EZzNOalEwTTMwLnM5T0RoVFRVMzBIUEJIRTRtdGFrZ0dMZEQ3MmxialpIYWVZVlpidzBaQWc="             # token da API
 URL_BASE = "http://192.168.1.10:9001/api/v1/caracteristicasproduto/"
 AUTH_SCHEME = "Bearer"  # use 'Bearer' to match your other app; change to 'Token' if needed
 
