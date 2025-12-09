@@ -5,9 +5,9 @@
 
 WITH parametros AS (
     SELECT 
-        6 AS escola_id,                 -- Valor fixo para escola_id
-        176 AS id_produto,              -- Valor fixo ou NULL para trazer todos
-        ARRAY['2025-12-31', '2025-12-17']::date[] AS datas_saida -- Lista de datas ou NULL
+        5 AS escola_id,                 -- Valor fixo para escola_id
+        162 AS id_produto,              -- Valor fixo ou NULL para trazer todos
+        ARRAY['2025-12-15']::date[] AS datas_saida -- Lista de datas ou NULL
 ),
 
 unidades_filtradas AS (
@@ -145,7 +145,7 @@ respostas_componentes AS (
         c.id_produto,
         c.id_componente,
         bp.id AS pergunta_id,
-        br.valor AS resposta
+        br.descricao_opcao  AS resposta
     FROM componentes c
     JOIN bremen_perguntas bp ON bp.id_componente = c.id_componente
     LEFT JOIN bremen_especificacao_detalhes bed 
@@ -163,7 +163,7 @@ respostas_gerais AS (
         i.especificacao_id,
         i.id_produto,
         bp.id AS pergunta_id,
-        br.valor AS resposta
+        br.descricao_opcao  AS resposta
     FROM itens i
     JOIN bremen_perguntas bp ON bp.id_geral = i.id_produto
     LEFT JOIN bremen_especificacao_detalhes bed 
@@ -221,7 +221,7 @@ SELECT json_build_object(
                                                 'id_pergunta', bp.id,
                                                 'pergunta', bp.nome,
                                                 'tipo', bp.tipo,
-                                                'resposta', rc.resposta
+                                                'resposta', rc.resposta 
                                             )
                                             ORDER BY bp.id
                                         )::jsonb
