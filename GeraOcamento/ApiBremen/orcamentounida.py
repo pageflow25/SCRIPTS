@@ -20,7 +20,7 @@ payload = json.dumps(
             {
                 "id_produto": 150,
                 "descricao": "0002-a_apostila_aluno-regular_4aetapa-2025_inf-5",
-                "quantidade": 40,
+                "quantidade": 20,
                 "usar_listapreco": 1,
                 "manter_estrutura_mod_produto": 1,
                 "componentes": [
@@ -59,8 +59,8 @@ payload = json.dumps(
                     {
                         "tipo": "Opções",
                         "pergunta": "Cor do Espiral?",
-                        "resposta": "Colorido",
-                        "id_pergunta": 22
+                        "resposta": "Branco",
+                        "id_pergunta": 21
                     },
                     {
                         "tipo": "Opções",

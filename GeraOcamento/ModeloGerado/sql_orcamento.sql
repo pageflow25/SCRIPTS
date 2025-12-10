@@ -1,19 +1,18 @@
 -- ========================================
--- SQL FINAL - Suporta produtos COM e SEM pares
--- ATUALIZAÇÃO: Gera um JSON por cliente_id (group by)
+-- SQL FINAL - CORREÇÃO DE CASE SENSITIVITY (categoria_Prod)
 -- ========================================
 
 WITH parametros AS (
-    SELECT 
-        5 AS escola_id,                 -- Valor fixo para escola_id
-        162 AS id_produto,              -- Valor fixo ou NULL para trazer todos
-        ARRAY['2025-12-15']::date[] AS datas_saida -- Lista de datas ou NULL
+    SELECT
+        13 AS escola_id,                 
+        150 AS id_produto,              
+        ARRAY['2025-12-17']::date[] AS datas_saida 
 ),
 
 unidades_filtradas AS (
     SELECT
         ue.id,
-        ue.cliente_id, -- Este campo será usado para o agrupamento final
+        ue.cliente_id, 
         ue.forma_pagamento,
         ue.escola_id
     FROM unidades_escolares ue
@@ -21,10 +20,9 @@ unidades_filtradas AS (
     WHERE ue.escola_id = p.escola_id
 ),
 
--- Identifica todas as especificações para as unidades da escola
 especificacoes_unidade AS (
     SELECT DISTINCT
-        uf.cliente_id, -- Propaga o cliente_id
+        uf.cliente_id,
         ef.id AS especificacao_id,
         ef.id_produto,
         COALESCE(bt.altura, NULLIF(ef.altura, '')::numeric) AS altura_mm,
@@ -38,7 +36,10 @@ especificacoes_unidade AS (
         ap.formulario_id,
         ap.nome AS arquivo_nome,
         ap.tipo_arquivo,
-        ap.id_componente
+        ap.id_componente,
+        ap.paginas, 
+        bi.frente_verso,
+        bi."categoria_Prod" -- CORREÇÃO: Aspas duplas e P maiúsculo conforme dica do erro
     FROM unidades_filtradas uf
     CROSS JOIN parametros p
     JOIN distribuicao_materiais dm ON dm.unidade_escolar_id = uf.id
@@ -46,44 +47,48 @@ especificacoes_unidade AS (
     LEFT JOIN bremen_gramatura bg ON bg.id = ef.id_gramatura
     LEFT JOIN bremen_tamanho_papel bt ON bt.id = ef.id_papel
     LEFT JOIN arquivo_pdfs ap ON ap.item_pedido_id = ef.id
+    LEFT JOIN bremen_itens bi ON bi.id_produto = ef.id_produto 
     WHERE dm.quantidade > 0
         AND (p.id_produto IS NULL OR ef.id_produto = p.id_produto)
         AND (
-            p.datas_saida IS NULL 
-            -- CORREÇÃO: Converte o campo de texto para date antes de comparar
+            p.datas_saida IS NULL
             OR NULLIF(dm.data_saida, '')::date = ANY(p.datas_saida)
         )
 ),
 
--- Agrupa produtos por par/especificação E AGORA POR CLIENTE
 itens_produto AS (
-    SELECT 
-        eu.cliente_id, -- Adicionado ao agrupamento
+    SELECT
+        eu.cliente_id, 
         COALESCE(eu.pares::text, eu.especificacao_id::text) AS chave_agrupamento,
         eu.pares,
         eu.formulario_id,
         MAX(eu.especificacao_id) AS especificacao_id,
         MAX(eu.id_produto) AS id_produto,
         COALESCE(
-            MAX(CASE WHEN LOWER(eu.tipo_arquivo) = 'capa' 
-                THEN REPLACE(LOWER(eu.arquivo_nome), '.pdf', '') END),
-            MAX(CASE WHEN LOWER(eu.tipo_arquivo) = 'miolo' 
-                THEN REPLACE(LOWER(eu.arquivo_nome), '.pdf', '') END),
+            MAX(CASE WHEN LOWER(eu.tipo_arquivo) = 'capa' THEN REPLACE(LOWER(eu.arquivo_nome), '.pdf', '') END),
+            MAX(CASE WHEN LOWER(eu.tipo_arquivo) = 'miolo' THEN REPLACE(LOWER(eu.arquivo_nome), '.pdf', '') END),
             MAX(REPLACE(LOWER(eu.arquivo_nome), '.pdf', ''))
         ) AS nome_arquivo,
         MAX(eu.altura_mm) AS altura,
         MAX(eu.largura_mm) AS largura,
         MAX(eu.gramatura_miolo) AS gramatura_miolo,
-        SUM(eu.quantidade) AS quantidade_total
+        MAX(eu.quantidade) AS quantidade_total,
+        
+		CASE
+    		WHEN (MAX(eu.paginas) > 2 AND UPPER(MAX(eu.frente_verso)) = 'FV' AND UPPER(MAX(eu."categoria_Prod")) = 'PROVA')
+    		  OR (MAX(eu.paginas) > 1 AND UPPER(MAX(eu.frente_verso)) = 'SF' AND UPPER(MAX(eu."categoria_Prod")) = 'PROVA')
+    		THEN 'normal'
+    		ELSE 'separado'
+		END AS tipo_agrupamento
+
     FROM especificacoes_unidade eu
-    GROUP BY 
-        eu.cliente_id, -- Agrupa para não misturar itens de clientes diferentes
-        COALESCE(eu.pares::text, eu.especificacao_id::text), 
-        eu.pares, 
+    GROUP BY
+        eu.cliente_id, 
+        COALESCE(eu.pares::text, eu.especificacao_id::text),
+        eu.pares,
         eu.formulario_id
 ),
 
--- Referência das especificações para buscar componentes
 itens AS (
     SELECT DISTINCT
         eu.pares,
@@ -148,7 +153,7 @@ respostas_componentes AS (
         br.descricao_opcao  AS resposta
     FROM componentes c
     JOIN bremen_perguntas bp ON bp.id_componente = c.id_componente
-    LEFT JOIN bremen_especificacao_detalhes bed 
+    LEFT JOIN bremen_especificacao_detalhes bed
         ON bed.pergunta_id = bp.id
         AND bed.especificacao_id = c.especificacao_id
     LEFT JOIN bremen_respostas br ON br.id = bed.resposta_id
@@ -166,7 +171,7 @@ respostas_gerais AS (
         br.descricao_opcao  AS resposta
     FROM itens i
     JOIN bremen_perguntas bp ON bp.id_geral = i.id_produto
-    LEFT JOIN bremen_especificacao_detalhes bed 
+    LEFT JOIN bremen_especificacao_detalhes bed
         ON bed.pergunta_id = bp.id
         AND bed.especificacao_id = i.especificacao_id
     LEFT JOIN bremen_respostas br ON br.id = bed.resposta_id
@@ -175,23 +180,22 @@ respostas_gerais AS (
 )
 
 -- ====================================================================
--- SELECT FINAL: Agrupa por cliente_id
+-- SELECT FINAL
 -- ====================================================================
 SELECT json_build_object(
     'identifier', 'PageFlow',
     'data', json_build_object(
-        'id_cliente', ip.cliente_id, -- Variável dinâmica baseada no grupo
+        'id_cliente', ip.cliente_id, 
         'id_vendedor', 3,
         'id_forma_pagamento', '1',
-
-        -- json_agg aqui agrega as linhas de 'itens_produto' pertencentes a este cliente_id
         'itens', COALESCE(
             json_agg(
                 json_build_object(
                     'id_produto', ip.id_produto,
                     'descricao', ip.nome_arquivo,
                     'quantidade', ip.quantidade_total,
-
+                    'usar_listapreco', 1,
+                    'manter_estrutura_mod_produto', 1,
                     'componentes', COALESCE((
                         SELECT json_agg(
                             jsonb_strip_nulls(
@@ -205,25 +209,18 @@ SELECT json_build_object(
                                         WHEN lower(coalesce(comp_sel.descricao, '')) = 'capa' THEN NULL
                                         ELSE COALESCE(
                                             comp_sel.gramatura_catalogo,
-                                            NULLIF(
-                                                replace(
-                                                    regexp_replace(comp_sel.gramatura_miolo::text, '[^0-9.,]', '', 'g'),
-                                                    ',',
-                                                    '.'
-                                                ),
-                                                ''
-                                            )::numeric
+                                            NULLIF(replace(regexp_replace(comp_sel.gramatura_miolo::text, '[^0-9.,]', '', 'g'), ',', '.'), '')::numeric
                                         )
                                     END,
                                     'perguntas_componente', COALESCE((
                                         SELECT json_agg(
                                             json_build_object(
-                                                'id_pergunta', bp.id,
+                                                'id_pergunta', bp.id_pergunta,
                                                 'pergunta', bp.nome,
                                                 'tipo', bp.tipo,
-                                                'resposta', rc.resposta 
+                                                'resposta', rc.resposta
                                             )
-                                            ORDER BY bp.id
+                                            ORDER BY bp.id_pergunta
                                         )::jsonb
                                         FROM bremen_perguntas bp
                                         INNER JOIN respostas_componentes rc
@@ -237,46 +234,28 @@ SELECT json_build_object(
                         )
                         FROM (
                             SELECT DISTINCT ON (comp.id_componente)
-                                comp.componente_id,
-                                comp.id_componente,
-                                comp.descricao,
-                                comp.altura,
-                                comp.largura,
-                                comp.gramatura_miolo,
-                                comp.gramatura_catalogo,
-                                comp.quantidade_paginas,
-                                comp.especificacao_id
+                                comp.componente_id, comp.id_componente, comp.descricao, comp.altura, comp.largura, comp.gramatura_miolo, comp.gramatura_catalogo, comp.quantidade_paginas, comp.especificacao_id
                             FROM componentes comp
                             WHERE (
                                 (ip.pares IS NOT NULL AND comp.pares = ip.pares AND comp.formulario_id = ip.formulario_id)
                                 OR (ip.pares IS NULL AND comp.especificacao_id = ip.especificacao_id)
                             )
-                            ORDER BY
-                                comp.id_componente,
-                                CASE WHEN EXISTS (
-                                    SELECT 1
-                                    FROM respostas_componentes rc_pref
-                                    WHERE rc_pref.id_componente = comp.id_componente
-                                      AND rc_pref.especificacao_id = comp.especificacao_id
-                                ) THEN 0 ELSE 1 END,
+                            ORDER BY comp.id_componente,
+                                CASE WHEN EXISTS (SELECT 1 FROM respostas_componentes rc_pref WHERE rc_pref.id_componente = comp.id_componente AND rc_pref.especificacao_id = comp.especificacao_id) THEN 0 ELSE 1 END,
                                 comp.especificacao_id
                         ) comp_sel
                     ), '[]'::json),
-
                     'perguntas_gerais', COALESCE((
                         SELECT json_agg(
-                            json_build_object(
-                                'id_pergunta', bp.id,
-                                'pergunta', bp.nome,
-                                'tipo', bp.tipo,
-                                'resposta', rg.resposta
-                            )
-                            ORDER BY bp.id
+							json_build_object(
+							  'tipo', bp.tipo,
+							  'pergunta', bp.nome,
+							  'resposta', rg.resposta,
+							  'id_pergunta', bp.id_pergunta
+							)
                         )
                         FROM bremen_perguntas bp
-                        INNER JOIN respostas_gerais rg
-                            ON rg.pergunta_id = bp.id
-                            AND rg.especificacao_id = ip.especificacao_id
+                        INNER JOIN respostas_gerais rg ON rg.pergunta_id = bp.id AND rg.especificacao_id = ip.especificacao_id
                         WHERE bp.id_geral = ip.id_produto
                     ), '[]'::json)
                 )
@@ -286,4 +265,5 @@ SELECT json_build_object(
     )
 )
 FROM itens_produto ip
-GROUP BY ip.cliente_id;
+GROUP BY ip.cliente_id, ip.tipo_agrupamento
+ORDER BY ip.cliente_id, ip.tipo_agrupamento DESC;
