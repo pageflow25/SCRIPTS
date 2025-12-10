@@ -1,12 +1,12 @@
 -- ========================================
--- SQL FINAL - CORREÇÃO DE CASE SENSITIVITY (categoria_Prod)
+-- SQL FINAL - CORREÇÃO GRAMATURA SOMENTE NO MIOLO
 -- ========================================
 
 WITH parametros AS (
     SELECT
-        13 AS escola_id,                 
-        150 AS id_produto,              
-        ARRAY['2025-12-17']::date[] AS datas_saida 
+		14 AS escola_id,                 
+        91 AS id_produto,              
+        ARRAY[]::date[] AS datas_saida
 ),
 
 unidades_filtradas AS (
@@ -39,7 +39,7 @@ especificacoes_unidade AS (
         ap.id_componente,
         ap.paginas, 
         bi.frente_verso,
-        bi."categoria_Prod" -- CORREÇÃO: Aspas duplas e P maiúsculo conforme dica do erro
+        bi."categoria_Prod"
     FROM unidades_filtradas uf
     CROSS JOIN parametros p
     JOIN distribuicao_materiais dm ON dm.unidade_escolar_id = uf.id
@@ -48,12 +48,13 @@ especificacoes_unidade AS (
     LEFT JOIN bremen_tamanho_papel bt ON bt.id = ef.id_papel
     LEFT JOIN arquivo_pdfs ap ON ap.item_pedido_id = ef.id
     LEFT JOIN bremen_itens bi ON bi.id_produto = ef.id_produto 
-    WHERE dm.quantidade > 0
-        AND (p.id_produto IS NULL OR ef.id_produto = p.id_produto)
-        AND (
-            p.datas_saida IS NULL
-            OR NULLIF(dm.data_saida, '')::date = ANY(p.datas_saida)
-        )
+	WHERE dm.quantidade > 0
+   	 	AND (p.id_produto IS NULL OR ef.id_produto = p.id_produto)
+    	AND (
+        	p.datas_saida IS NULL
+        	OR NULLIF(dm.data_saida, '')::date = ANY(p.datas_saida)
+        	OR NULLIF(dm.data_saida, '') IS NULL
+    	)
 ),
 
 itens_produto AS (
@@ -118,22 +119,35 @@ componentes AS (
         ROUND(i.largura_mm::numeric / 10, 2) AS largura,
         i.gramatura_miolo,
         i.gramatura_catalogo,
-        (
-            SELECT ap_pag.paginas
-            FROM arquivo_pdfs ap_pag
-            WHERE ap_pag.item_pedido_id = i.especificacao_id
-              AND ap_pag.id_componente = bc.id_componente
-              AND (
-                  (i.pares IS NOT NULL AND ap_pag.pares = i.pares AND ap_pag.formulario_id = i.formulario_id)
-                  OR (i.pares IS NULL AND ap_pag.pares IS NULL AND ap_pag.formulario_id = i.formulario_id)
-                  OR (i.pares IS NULL AND ap_pag.formulario_id IS NULL)
-              )
-            ORDER BY ap_pag.criado_em DESC
-            LIMIT 1
-        ) AS quantidade_paginas
+        CASE
+            WHEN LOWER(COALESCE(bc.descricao, '')) LIKE '%capa%' THEN 1
+            WHEN LOWER(COALESCE(bc.descricao, '')) LIKE '%miolo%' THEN (
+                SELECT COALESCE(ap_pag.paginas, 0)
+                FROM arquivo_pdfs ap_pag
+                WHERE ap_pag.id_componente = bc.id_componente
+                  AND LOWER(COALESCE(ap_pag.tipo_arquivo, '')) = 'miolo'
+                  AND (
+                      (i.pares IS NOT NULL AND ap_pag.pares = i.pares AND ap_pag.formulario_id = i.formulario_id)
+                      OR (i.pares IS NULL AND ap_pag.item_pedido_id = i.especificacao_id)
+                  )
+                ORDER BY ap_pag.criado_em DESC
+                LIMIT 1
+            )
+            ELSE (
+                SELECT ap_pag.paginas
+                FROM arquivo_pdfs ap_pag
+                WHERE ap_pag.id_componente = bc.id_componente
+                  AND (
+                      (i.pares IS NOT NULL AND ap_pag.pares = i.pares AND ap_pag.formulario_id = i.formulario_id)
+                      OR (i.pares IS NULL AND ap_pag.item_pedido_id = i.especificacao_id)
+                  )
+                ORDER BY ap_pag.criado_em DESC
+                LIMIT 1
+            )
+        END AS quantidade_paginas
     FROM itens i
     JOIN bremen_componentes bc ON bc.id_produto = i.id_produto
-    JOIN arquivo_pdfs ap_sel
+    LEFT JOIN arquivo_pdfs ap_sel
         ON ap_sel.item_pedido_id = i.especificacao_id
        AND ap_sel.id_componente = bc.id_componente
        AND (
@@ -199,37 +213,70 @@ SELECT json_build_object(
                     'componentes', COALESCE((
                         SELECT json_agg(
                             jsonb_strip_nulls(
-                                jsonb_build_object(
-                                    'id', comp_sel.id_componente,
-                                    'descricao', comp_sel.descricao,
-                                    'altura', comp_sel.altura,
-                                    'largura', comp_sel.largura,
-                                    'quantidade_paginas', comp_sel.quantidade_paginas,
-                                    'gramaturasubstratoimpressao', CASE
-                                        WHEN lower(coalesce(comp_sel.descricao, '')) = 'capa' THEN NULL
-                                        ELSE COALESCE(
-                                            comp_sel.gramatura_catalogo,
-                                            NULLIF(replace(regexp_replace(comp_sel.gramatura_miolo::text, '[^0-9.,]', '', 'g'), ',', '.'), '')::numeric
+                                CASE
+                                    WHEN LOWER(COALESCE(comp_sel.descricao, '')) LIKE '%miolo%' THEN
+                                        jsonb_build_object(
+                                            'id', comp_sel.id_componente,
+                                            'descricao', comp_sel.descricao,
+                                            'altura', comp_sel.altura,
+                                            'largura', comp_sel.largura,
+                                            'quantidade_paginas', COALESCE(comp_sel.quantidade_paginas, 0),
+                                            'gramaturasubstratoimpressao', COALESCE(
+                                                comp_sel.gramatura_catalogo,
+                                                NULLIF(replace(regexp_replace(comp_sel.gramatura_miolo::text, '[^0-9.,]', '', 'g'), ',', '.'), '')::numeric
+                                            ),
+                                            'perguntas_componente', COALESCE((
+                                                SELECT json_agg(
+                                                    json_build_object(
+                                                        'id_pergunta', bp.id_pergunta,
+                                                        'pergunta', bp.nome,
+                                                        'tipo', bp.tipo,
+                                                        'resposta', rc.resposta
+                                                    )
+                                                    ORDER BY bp.id_pergunta
+                                                )::jsonb
+                                                FROM bremen_perguntas bp
+                                                INNER JOIN respostas_componentes rc
+                                                    ON rc.pergunta_id = bp.id
+                                                    AND rc.id_componente = comp_sel.id_componente
+                                                    AND rc.especificacao_id = comp_sel.especificacao_id
+                                                WHERE bp.id_componente = comp_sel.id_componente
+                                            ), '[]'::jsonb)
                                         )
-                                    END,
-                                    'perguntas_componente', COALESCE((
-                                        SELECT json_agg(
-                                            json_build_object(
-                                                'id_pergunta', bp.id_pergunta,
-                                                'pergunta', bp.nome,
-                                                'tipo', bp.tipo,
-                                                'resposta', rc.resposta
-                                            )
-                                            ORDER BY bp.id_pergunta
-                                        )::jsonb
-                                        FROM bremen_perguntas bp
-                                        INNER JOIN respostas_componentes rc
-                                            ON rc.pergunta_id = bp.id
-                                            AND rc.id_componente = comp_sel.id_componente
-                                            AND rc.especificacao_id = comp_sel.especificacao_id
-                                        WHERE bp.id_componente = comp_sel.id_componente
-                                    ), '[]'::jsonb)
-                                )
+                                    ELSE
+                                        jsonb_build_object(
+                                            'id', comp_sel.id_componente,
+                                            'descricao', comp_sel.descricao,
+                                            'altura', comp_sel.altura,
+                                            'largura', comp_sel.largura,
+                                            'quantidade_paginas', comp_sel.quantidade_paginas,
+                                            'gramaturasubstratoimpressao', CASE
+                                                WHEN LOWER(COALESCE(comp_sel.descricao, '')) LIKE '%miolo%' THEN 
+                                                    COALESCE(
+                                                        comp_sel.gramatura_catalogo,
+                                                        NULLIF(replace(regexp_replace(comp_sel.gramatura_miolo::text, '[^0-9.,]', '', 'g'), ',', '.'), '')::numeric
+                                                    )
+                                                ELSE NULL
+                                            END,
+                                            'perguntas_componente', COALESCE((
+                                                SELECT json_agg(
+                                                    json_build_object(
+                                                        'id_pergunta', bp.id_pergunta,
+                                                        'pergunta', bp.nome,
+                                                        'tipo', bp.tipo,
+                                                        'resposta', rc.resposta
+                                                    )
+                                                    ORDER BY bp.id_pergunta
+                                                )::jsonb
+                                                FROM bremen_perguntas bp
+                                                INNER JOIN respostas_componentes rc
+                                                    ON rc.pergunta_id = bp.id
+                                                    AND rc.id_componente = comp_sel.id_componente
+                                                    AND rc.especificacao_id = comp_sel.especificacao_id
+                                                WHERE bp.id_componente = comp_sel.id_componente
+                                            ), '[]'::jsonb)
+                                        )
+                                END
                             )::jsonb
                         )
                         FROM (
