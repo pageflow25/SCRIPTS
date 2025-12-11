@@ -4,8 +4,8 @@
 
 WITH parametros AS (
     SELECT
-		14 AS escola_id,                 
-        91 AS id_produto,              
+		2 AS escola_id,                 
+        149 AS id_produto,              
         ARRAY[]::date[] AS datas_saida
 ),
 
@@ -65,10 +65,12 @@ itens_produto AS (
         eu.formulario_id,
         MAX(eu.especificacao_id) AS especificacao_id,
         MAX(eu.id_produto) AS id_produto,
-        COALESCE(
-            MAX(CASE WHEN LOWER(eu.tipo_arquivo) = 'capa' THEN REPLACE(LOWER(eu.arquivo_nome), '.pdf', '') END),
-            MAX(CASE WHEN LOWER(eu.tipo_arquivo) = 'miolo' THEN REPLACE(LOWER(eu.arquivo_nome), '.pdf', '') END),
-            MAX(REPLACE(LOWER(eu.arquivo_nome), '.pdf', ''))
+        (
+        	COALESCE(
+        	    MAX(CASE WHEN LOWER(eu.tipo_arquivo) = 'capa' THEN REPLACE(LOWER(eu.arquivo_nome), '.pdf', '') END),
+        	    MAX(CASE WHEN LOWER(eu.tipo_arquivo) = 'miolo' THEN REPLACE(LOWER(eu.arquivo_nome), '.pdf', '') END),
+        	    MAX(REPLACE(LOWER(eu.arquivo_nome), '.pdf', ''))
+        	) || ' | (#' || MAX(form.id) || ')'
         ) AS nome_arquivo,
         MAX(eu.altura_mm) AS altura,
         MAX(eu.largura_mm) AS largura,
@@ -83,6 +85,7 @@ itens_produto AS (
 		END AS tipo_agrupamento
 
     FROM especificacoes_unidade eu
+    join formularios form on form.id = eu.formulario_id
     GROUP BY
         eu.cliente_id, 
         COALESCE(eu.pares::text, eu.especificacao_id::text),
@@ -96,7 +99,9 @@ itens AS (
         eu.formulario_id,
         eu.especificacao_id,
         eu.id_produto,
+        
         bi.descricao,
+        
         eu.altura_mm,
         eu.largura_mm,
         eu.gramatura_miolo,

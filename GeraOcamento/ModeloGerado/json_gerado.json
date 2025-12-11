@@ -1,19 +1,19 @@
 {
     "identifier": "PageFlow",
     "data": {
-        "id_cliente": null,
+        "id_cliente": 151,
         "id_vendedor": 3,
         "id_forma_pagamento": "1",
         "itens": [
             {
-                "id_produto": 91,
-                "descricao": "0002-b_apostila_aluno-bilingue_4aetapa-2025_inf-5",
-                "quantidade": 20,
+                "id_produto": 149,
+                "descricao": "pag_fox_-_pag_-_0812 | (#342)",
+                "quantidade": 321,
                 "usar_listapreco": 1,
                 "manter_estrutura_mod_produto": 1,
                 "componentes": [
                     {
-                        "id": 236,
+                        "id": 352,
                         "altura": 14.80,
                         "largura": 10.50,
                         "descricao": "Capa",
@@ -34,30 +34,43 @@
                         ]
                     },
                     {
-                        "id": 237,
+                        "id": 353,
                         "altura": 14.80,
                         "largura": 10.50,
-                        "descricao": "Miolo",
-                        "quantidade_paginas": 117,
+                        "descricao": "Miolo da Apostila",
+                        "quantidade_paginas": 4,
                         "perguntas_componente": [],
                         "gramaturasubstratoimpressao": 75.00
                     },
                     {
-                        "id": 246,
+                        "id": 354,
                         "altura": 14.80,
                         "largura": 10.50,
                         "descricao": "Papelão",
                         "perguntas_componente": []
                     },
                     {
-                        "id": 247,
+                        "id": 355,
                         "altura": 14.80,
                         "largura": 10.50,
                         "descricao": "Guarda",
                         "perguntas_componente": []
                     }
                 ],
-                "perguntas_gerais": []
+                "perguntas_gerais": [
+                    {
+                        "tipo": "Opções",
+                        "pergunta": "Cor do Espiral?",
+                        "resposta": "Branco",
+                        "id_pergunta": 37
+                    },
+                    {
+                        "tipo": "Opções",
+                        "pergunta": "Borda de Encadernação?",
+                        "resposta": "Borda Maior",
+                        "id_pergunta": 22
+                    }
+                ]
             }
         ]
     }
