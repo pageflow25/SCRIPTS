@@ -5,7 +5,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:28:59.317-03:00",
+            "create_at": "2025-12-12T08:51:14.615-03:00",
             "data": [
                 {
                     "id": 86,
@@ -91,7 +91,7 @@
                         },
                         {
                             "id": 223,
-                            "descricao": "Miolo da Apostila",
+                            "descricao": "Miolo",
                             "altura": 0,
                             "largura": 0,
                             "perguntas_componente": null,
@@ -234,7 +234,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:28:59.636-03:00",
+            "create_at": "2025-12-12T08:51:14.930-03:00",
             "data": [
                 {
                     "id": 88,
@@ -415,7 +415,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:28:59.951-03:00",
+            "create_at": "2025-12-12T08:51:15.261-03:00",
             "data": [
                 {
                     "id": 112,
@@ -648,7 +648,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:00.279-03:00",
+            "create_at": "2025-12-12T08:51:15.594-03:00",
             "data": [
                 {
                     "id": 118,
@@ -833,7 +833,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:00.610-03:00",
+            "create_at": "2025-12-12T08:51:15.912-03:00",
             "data": [
                 {
                     "id": 85,
@@ -919,7 +919,7 @@
                         },
                         {
                             "id": 219,
-                            "descricao": "Miolo da Apostila",
+                            "descricao": "Miolo",
                             "altura": 0,
                             "largura": 0,
                             "perguntas_componente": null,
@@ -1011,7 +1011,7 @@
                                 },
                                 {
                                     "valor": "C",
-                                    "descricao_opcao": "Colorido"
+                                    "descricao_opcao": "Branco"
                                 }
                             ]
                         },
@@ -1058,7 +1058,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:00.926-03:00",
+            "create_at": "2025-12-12T08:51:16.254-03:00",
             "data": [
                 {
                     "id": 87,
@@ -1188,7 +1188,7 @@
                                 },
                                 {
                                     "valor": "C",
-                                    "descricao_opcao": "Colorido"
+                                    "descricao_opcao": "Branco"
                                 }
                             ]
                         },
@@ -1235,7 +1235,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:01.235-03:00",
+            "create_at": "2025-12-12T08:51:16.568-03:00",
             "data": [
                 {
                     "id": 100,
@@ -1292,7 +1292,7 @@
                                         },
                                         {
                                             "valor": "C",
-                                            "descricao_opcao": "Colorido"
+                                            "descricao_opcao": "Branco"
                                         }
                                     ]
                                 },
@@ -1382,7 +1382,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:01.550-03:00",
+            "create_at": "2025-12-12T08:51:16.893-03:00",
             "data": [
                 {
                     "id": 101,
@@ -1439,7 +1439,7 @@
                                         },
                                         {
                                             "valor": "C",
-                                            "descricao_opcao": "Colorido"
+                                            "descricao_opcao": "Branco"
                                         }
                                     ]
                                 },
@@ -1544,7 +1544,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:01.877-03:00",
+            "create_at": "2025-12-12T08:51:17.223-03:00",
             "data": [
                 {
                     "id": 111,
@@ -1726,7 +1726,7 @@
                                 },
                                 {
                                     "valor": "C",
-                                    "descricao_opcao": "Colorido"
+                                    "descricao_opcao": "Branco"
                                 }
                             ]
                         },
@@ -1773,7 +1773,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:02.194-03:00",
+            "create_at": "2025-12-12T08:51:17.531-03:00",
             "data": [
                 {
                     "id": 115,
@@ -1907,7 +1907,7 @@
                                 },
                                 {
                                     "valor": "C",
-                                    "descricao_opcao": "Colorido"
+                                    "descricao_opcao": "Branco"
                                 }
                             ]
                         },
@@ -1954,7 +1954,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:02.536-03:00",
+            "create_at": "2025-12-12T08:51:17.856-03:00",
             "data": [
                 {
                     "id": 105,
@@ -2040,7 +2040,7 @@
                         },
                         {
                             "id": 269,
-                            "descricao": "Miolo da Apostila",
+                            "descricao": "Miolo",
                             "altura": 0,
                             "largura": 0,
                             "perguntas_componente": null,
@@ -2183,7 +2183,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:02.865-03:00",
+            "create_at": "2025-12-12T08:51:18.174-03:00",
             "data": [
                 {
                     "id": 104,
@@ -2364,7 +2364,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:03.196-03:00",
+            "create_at": "2025-12-12T08:51:18.507-03:00",
             "data": [
                 {
                     "id": 114,
@@ -2597,7 +2597,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:03.516-03:00",
+            "create_at": "2025-12-12T08:51:18.833-03:00",
             "data": [
                 {
                     "id": 117,
@@ -2782,7 +2782,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:03.831-03:00",
+            "create_at": "2025-12-12T08:51:19.163-03:00",
             "data": [
                 {
                     "id": 107,
@@ -2960,7 +2960,7 @@
                                 },
                                 {
                                     "valor": "C",
-                                    "descricao_opcao": "Colorido"
+                                    "descricao_opcao": "Branco"
                                 }
                             ]
                         },
@@ -3007,7 +3007,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:04.147-03:00",
+            "create_at": "2025-12-12T08:51:19.491-03:00",
             "data": [
                 {
                     "id": 106,
@@ -3137,7 +3137,7 @@
                                 },
                                 {
                                     "valor": "C",
-                                    "descricao_opcao": "Colorido"
+                                    "descricao_opcao": "Branco"
                                 }
                             ]
                         },
@@ -3184,7 +3184,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:04.471-03:00",
+            "create_at": "2025-12-12T08:51:19.824-03:00",
             "data": [
                 {
                     "id": 109,
@@ -3241,7 +3241,7 @@
                                         },
                                         {
                                             "valor": "C",
-                                            "descricao_opcao": "Colorido"
+                                            "descricao_opcao": "Branco"
                                         }
                                     ]
                                 },
@@ -3331,7 +3331,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:04.790-03:00",
+            "create_at": "2025-12-12T08:51:20.168-03:00",
             "data": [
                 {
                     "id": 113,
@@ -3513,7 +3513,7 @@
                                 },
                                 {
                                     "valor": "C",
-                                    "descricao_opcao": "Colorido"
+                                    "descricao_opcao": "Branco"
                                 }
                             ]
                         },
@@ -3560,7 +3560,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:05.123-03:00",
+            "create_at": "2025-12-12T08:51:20.483-03:00",
             "data": [
                 {
                     "id": 116,
@@ -3694,7 +3694,7 @@
                                 },
                                 {
                                     "valor": "C",
-                                    "descricao_opcao": "Colorido"
+                                    "descricao_opcao": "Branco"
                                 }
                             ]
                         },
@@ -3741,7 +3741,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:05.438-03:00",
+            "create_at": "2025-12-12T08:51:20.814-03:00",
             "data": [
                 {
                     "id": 120,
@@ -3869,7 +3869,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:05.754-03:00",
+            "create_at": "2025-12-12T08:51:21.129-03:00",
             "data": [
                 {
                     "id": 110,
@@ -3928,7 +3928,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:06.130-03:00",
+            "create_at": "2025-12-12T08:51:21.480-03:00",
             "data": [
                 {
                     "id": 103,
@@ -4002,7 +4002,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:06.480-03:00",
+            "create_at": "2025-12-12T08:51:21.870-03:00",
             "data": [
                 {
                     "id": 121,
@@ -4134,7 +4134,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:06.812-03:00",
+            "create_at": "2025-12-12T08:51:22.202-03:00",
             "data": [
                 {
                     "id": 125,
@@ -4193,7 +4193,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:07.159-03:00",
+            "create_at": "2025-12-12T08:51:22.582-03:00",
             "data": [
                 {
                     "id": 144,
@@ -4272,7 +4272,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:07.537-03:00",
+            "create_at": "2025-12-12T08:51:22.940-03:00",
             "data": [
                 {
                     "id": 119,
@@ -4400,7 +4400,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:07.871-03:00",
+            "create_at": "2025-12-12T08:51:23.266-03:00",
             "data": [
                 {
                     "id": 92,
@@ -4459,7 +4459,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:08.296-03:00",
+            "create_at": "2025-12-12T08:51:23.637-03:00",
             "data": [
                 {
                     "id": 122,
@@ -4591,7 +4591,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:08.615-03:00",
+            "create_at": "2025-12-12T08:51:23.970-03:00",
             "data": [
                 {
                     "id": 126,
@@ -4650,7 +4650,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:08.995-03:00",
+            "create_at": "2025-12-12T08:51:24.327-03:00",
             "data": [
                 {
                     "id": 93,
@@ -4700,7 +4700,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:09.352-03:00",
+            "create_at": "2025-12-12T08:51:24.704-03:00",
             "data": [
                 {
                     "id": 108,
@@ -4750,7 +4750,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:09.729-03:00",
+            "create_at": "2025-12-12T08:51:25.085-03:00",
             "data": [
                 {
                     "id": 89,
@@ -4879,7 +4879,7 @@
                             "id": 62
                         },
                         {
-                            "descricao": "Shirink",
+                            "descricao": "Shrink",
                             "id": 63
                         }
                     ]
@@ -4899,7 +4899,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:10.060-03:00",
+            "create_at": "2025-12-12T08:51:25.421-03:00",
             "data": [
                 {
                     "id": 90,
@@ -5026,10 +5026,6 @@
                         {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
-                        },
-                        {
-                            "descricao": "Shirink",
-                            "id": 63
                         }
                     ]
                 }
@@ -5048,7 +5044,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:10.365-03:00",
+            "create_at": "2025-12-12T08:51:25.732-03:00",
             "data": [
                 {
                     "id": 124,
@@ -5181,7 +5177,7 @@
                             "id": 62
                         },
                         {
-                            "descricao": "Shirink",
+                            "descricao": "Shrink",
                             "id": 63
                         }
                     ]
@@ -5201,7 +5197,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:10.676-03:00",
+            "create_at": "2025-12-12T08:51:26.058-03:00",
             "data": [
                 {
                     "id": 123,
@@ -5334,7 +5330,7 @@
                             "id": 62
                         },
                         {
-                            "descricao": "Shirink",
+                            "descricao": "Shrink",
                             "id": 63
                         }
                     ]
@@ -5354,7 +5350,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:11.009-03:00",
+            "create_at": "2025-12-12T08:51:26.373-03:00",
             "data": [
                 {
                     "id": 131,
@@ -5409,7 +5405,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:11.388-03:00",
+            "create_at": "2025-12-12T08:51:26.755-03:00",
             "data": [
                 {
                     "id": 91,
@@ -5579,7 +5575,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:11.703-03:00",
+            "create_at": "2025-12-12T08:51:27.069-03:00",
             "data": [
                 {
                     "id": 129,
@@ -5605,12 +5601,12 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -5629,7 +5625,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:12.070-03:00",
+            "create_at": "2025-12-12T08:51:27.435-03:00",
             "data": [
                 {
                     "id": 128,
@@ -5655,12 +5651,12 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -5679,7 +5675,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:12.432-03:00",
+            "create_at": "2025-12-12T08:51:27.793-03:00",
             "data": [
                 {
                     "id": 134,
@@ -5710,12 +5706,12 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -5734,7 +5730,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:12.796-03:00",
+            "create_at": "2025-12-12T08:51:28.154-03:00",
             "data": [
                 {
                     "id": 133,
@@ -5765,12 +5761,12 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -5789,7 +5785,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:13.172-03:00",
+            "create_at": "2025-12-12T08:51:28.517-03:00",
             "data": [
                 {
                     "id": 143,
@@ -5815,16 +5811,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Plastificação",
                             "id": 71
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -5843,7 +5839,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:13.556-03:00",
+            "create_at": "2025-12-12T08:51:28.878-03:00",
             "data": [
                 {
                     "id": 141,
@@ -5869,16 +5865,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Plastificação",
                             "id": 71
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -5897,7 +5893,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:13.915-03:00",
+            "create_at": "2025-12-12T08:51:29.227-03:00",
             "data": [
                 {
                     "id": 137,
@@ -5928,16 +5924,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Plastificação",
                             "id": 71
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -5956,7 +5952,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:14.275-03:00",
+            "create_at": "2025-12-12T08:51:29.575-03:00",
             "data": [
                 {
                     "id": 138,
@@ -5987,16 +5983,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Plastificação",
                             "id": 71
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -6015,7 +6011,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:14.625-03:00",
+            "create_at": "2025-12-12T08:51:29.933-03:00",
             "data": [
                 {
                     "id": 130,
@@ -6041,12 +6037,12 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -6065,7 +6061,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:14.977-03:00",
+            "create_at": "2025-12-12T08:51:30.295-03:00",
             "data": [
                 {
                     "id": 127,
@@ -6091,12 +6087,12 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -6115,7 +6111,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:15.351-03:00",
+            "create_at": "2025-12-12T08:51:30.646-03:00",
             "data": [
                 {
                     "id": 135,
@@ -6146,12 +6142,12 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -6170,7 +6166,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:15.699-03:00",
+            "create_at": "2025-12-12T08:51:31.007-03:00",
             "data": [
                 {
                     "id": 132,
@@ -6201,12 +6197,12 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -6225,7 +6221,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:16.049-03:00",
+            "create_at": "2025-12-12T08:51:31.362-03:00",
             "data": [
                 {
                     "id": 142,
@@ -6251,16 +6247,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Plastificação",
                             "id": 71
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -6279,7 +6275,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:16.414-03:00",
+            "create_at": "2025-12-12T08:51:31.731-03:00",
             "data": [
                 {
                     "id": 140,
@@ -6305,16 +6301,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Plastificação",
                             "id": 71
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -6333,7 +6329,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:16.777-03:00",
+            "create_at": "2025-12-12T08:51:32.099-03:00",
             "data": [
                 {
                     "id": 136,
@@ -6364,16 +6360,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Plastificação",
                             "id": 71
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -6392,7 +6388,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:17.153-03:00",
+            "create_at": "2025-12-12T08:51:32.463-03:00",
             "data": [
                 {
                     "id": 139,
@@ -6423,16 +6419,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Plastificação",
                             "id": 71
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -6451,7 +6447,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:17.527-03:00",
+            "create_at": "2025-12-12T08:51:32.832-03:00",
             "data": [
                 {
                     "id": 145,
@@ -6537,7 +6533,7 @@
                         },
                         {
                             "id": 341,
-                            "descricao": "Miolo da Apostila",
+                            "descricao": "Miolo",
                             "altura": 0,
                             "largura": 0,
                             "perguntas_componente": null,
@@ -6684,7 +6680,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:17.847-03:00",
+            "create_at": "2025-12-12T08:51:33.146-03:00",
             "data": [
                 {
                     "id": 146,
@@ -6869,7 +6865,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:18.170-03:00",
+            "create_at": "2025-12-12T08:51:33.478-03:00",
             "data": [
                 {
                     "id": 147,
@@ -7106,7 +7102,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:18.538-03:00",
+            "create_at": "2025-12-12T08:51:33.794-03:00",
             "data": [
                 {
                     "id": 148,
@@ -7295,7 +7291,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:18.884-03:00",
+            "create_at": "2025-12-12T08:51:34.125-03:00",
             "data": [
                 {
                     "id": 149,
@@ -7381,7 +7377,7 @@
                         },
                         {
                             "id": 353,
-                            "descricao": "Miolo da Apostila",
+                            "descricao": "Miolo",
                             "altura": 0,
                             "largura": 0,
                             "perguntas_componente": null,
@@ -7473,7 +7469,7 @@
                                 },
                                 {
                                     "valor": "C",
-                                    "descricao_opcao": "Colorido"
+                                    "descricao_opcao": "Branco"
                                 }
                             ]
                         },
@@ -7524,7 +7520,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:19.218-03:00",
+            "create_at": "2025-12-12T08:51:34.438-03:00",
             "data": [
                 {
                     "id": 150,
@@ -7654,7 +7650,7 @@
                                 },
                                 {
                                     "valor": "C",
-                                    "descricao_opcao": "Colorido"
+                                    "descricao_opcao": "Branco"
                                 }
                             ]
                         },
@@ -7705,7 +7701,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:19.536-03:00",
+            "create_at": "2025-12-12T08:51:34.771-03:00",
             "data": [
                 {
                     "id": 151,
@@ -7762,7 +7758,7 @@
                                         },
                                         {
                                             "valor": "C",
-                                            "descricao_opcao": "Colorido"
+                                            "descricao_opcao": "Branco"
                                         }
                                     ]
                                 },
@@ -7856,7 +7852,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:19.862-03:00",
+            "create_at": "2025-12-12T08:51:35.087-03:00",
             "data": [
                 {
                     "id": 152,
@@ -7913,7 +7909,7 @@
                                         },
                                         {
                                             "valor": "C",
-                                            "descricao_opcao": "Colorido"
+                                            "descricao_opcao": "Branco"
                                         }
                                     ]
                                 },
@@ -8022,7 +8018,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:20.193-03:00",
+            "create_at": "2025-12-12T08:51:35.416-03:00",
             "data": [
                 {
                     "id": 155,
@@ -8204,7 +8200,7 @@
                                 },
                                 {
                                     "valor": "C",
-                                    "descricao_opcao": "Colorido"
+                                    "descricao_opcao": "Branco"
                                 }
                             ]
                         },
@@ -8255,7 +8251,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:20.508-03:00",
+            "create_at": "2025-12-12T08:51:35.746-03:00",
             "data": [
                 {
                     "id": 156,
@@ -8389,7 +8385,7 @@
                                 },
                                 {
                                     "valor": "C",
-                                    "descricao_opcao": "Colorido"
+                                    "descricao_opcao": "Branco"
                                 }
                             ]
                         },
@@ -8440,7 +8436,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:20.847-03:00",
+            "create_at": "2025-12-12T08:51:36.061-03:00",
             "data": [
                 {
                     "id": 157,
@@ -8526,7 +8522,7 @@
                         },
                         {
                             "id": 380,
-                            "descricao": "Miolo da Apostila",
+                            "descricao": "Miolo",
                             "altura": 0,
                             "largura": 0,
                             "perguntas_componente": null,
@@ -8673,7 +8669,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:21.173-03:00",
+            "create_at": "2025-12-12T08:51:36.390-03:00",
             "data": [
                 {
                     "id": 158,
@@ -8858,7 +8854,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:21.508-03:00",
+            "create_at": "2025-12-12T08:51:36.707-03:00",
             "data": [
                 {
                     "id": 159,
@@ -9095,7 +9091,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:21.840-03:00",
+            "create_at": "2025-12-12T08:51:37.024-03:00",
             "data": [
                 {
                     "id": 160,
@@ -9284,7 +9280,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:22.154-03:00",
+            "create_at": "2025-12-12T08:51:37.353-03:00",
             "data": [
                 {
                     "id": 161,
@@ -9462,7 +9458,7 @@
                                 },
                                 {
                                     "valor": "C",
-                                    "descricao_opcao": "Colorido"
+                                    "descricao_opcao": "Branco"
                                 }
                             ]
                         },
@@ -9513,7 +9509,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:22.469-03:00",
+            "create_at": "2025-12-12T08:51:37.669-03:00",
             "data": [
                 {
                     "id": 162,
@@ -9643,7 +9639,7 @@
                                 },
                                 {
                                     "valor": "C",
-                                    "descricao_opcao": "Colorido"
+                                    "descricao_opcao": "Branco"
                                 }
                             ]
                         },
@@ -9694,7 +9690,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:22.784-03:00",
+            "create_at": "2025-12-12T08:51:37.983-03:00",
             "data": [
                 {
                     "id": 163,
@@ -9751,7 +9747,7 @@
                                         },
                                         {
                                             "valor": "C",
-                                            "descricao_opcao": "Colorido"
+                                            "descricao_opcao": "Branco"
                                         }
                                     ]
                                 },
@@ -9845,7 +9841,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:23.113-03:00",
+            "create_at": "2025-12-12T08:51:38.298-03:00",
             "data": [
                 {
                     "id": 164,
@@ -10027,7 +10023,7 @@
                                 },
                                 {
                                     "valor": "C",
-                                    "descricao_opcao": "Colorido"
+                                    "descricao_opcao": "Branco"
                                 }
                             ]
                         },
@@ -10078,7 +10074,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:23.428-03:00",
+            "create_at": "2025-12-12T08:51:38.630-03:00",
             "data": [
                 {
                     "id": 165,
@@ -10212,7 +10208,7 @@
                                 },
                                 {
                                     "valor": "C",
-                                    "descricao_opcao": "Colorido"
+                                    "descricao_opcao": "Branco"
                                 }
                             ]
                         },
@@ -10263,7 +10259,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:23.760-03:00",
+            "create_at": "2025-12-12T08:51:38.962-03:00",
             "data": [
                 {
                     "id": 166,
@@ -10395,7 +10391,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:24.074-03:00",
+            "create_at": "2025-12-12T08:51:39.276-03:00",
             "data": [
                 {
                     "id": 167,
@@ -10458,7 +10454,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:24.442-03:00",
+            "create_at": "2025-12-12T08:51:39.660-03:00",
             "data": [
                 {
                     "id": 168,
@@ -10532,7 +10528,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:24.805-03:00",
+            "create_at": "2025-12-12T08:51:40.031-03:00",
             "data": [
                 {
                     "id": 169,
@@ -10668,7 +10664,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:25.130-03:00",
+            "create_at": "2025-12-12T08:51:40.347-03:00",
             "data": [
                 {
                     "id": 170,
@@ -10731,7 +10727,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:25.497-03:00",
+            "create_at": "2025-12-12T08:51:40.698-03:00",
             "data": [
                 {
                     "id": 171,
@@ -10814,7 +10810,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:25.889-03:00",
+            "create_at": "2025-12-12T08:51:41.075-03:00",
             "data": [
                 {
                     "id": 172,
@@ -10946,7 +10942,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:26.217-03:00",
+            "create_at": "2025-12-12T08:51:41.388-03:00",
             "data": [
                 {
                     "id": 173,
@@ -11009,7 +11005,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:26.584-03:00",
+            "create_at": "2025-12-12T08:51:41.758-03:00",
             "data": [
                 {
                     "id": 174,
@@ -11145,7 +11141,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:26.899-03:00",
+            "create_at": "2025-12-12T08:51:42.063-03:00",
             "data": [
                 {
                     "id": 175,
@@ -11208,7 +11204,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:27.255-03:00",
+            "create_at": "2025-12-12T08:51:42.438-03:00",
             "data": [
                 {
                     "id": 176,
@@ -11262,7 +11258,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:27.625-03:00",
+            "create_at": "2025-12-12T08:51:42.787-03:00",
             "data": [
                 {
                     "id": 177,
@@ -11316,7 +11312,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:27.973-03:00",
+            "create_at": "2025-12-12T08:51:43.165-03:00",
             "data": [
                 {
                     "id": 178,
@@ -11445,7 +11441,7 @@
                             "id": 62
                         },
                         {
-                            "descricao": "Shirink",
+                            "descricao": "Shrink",
                             "id": 63
                         },
                         {
@@ -11469,7 +11465,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:28.289-03:00",
+            "create_at": "2025-12-12T08:51:43.480-03:00",
             "data": [
                 {
                     "id": 179,
@@ -11598,7 +11594,7 @@
                             "id": 62
                         },
                         {
-                            "descricao": "Shirink",
+                            "descricao": "Shrink",
                             "id": 63
                         },
                         {
@@ -11622,7 +11618,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:28.619-03:00",
+            "create_at": "2025-12-12T08:51:43.807-03:00",
             "data": [
                 {
                     "id": 180,
@@ -11755,7 +11751,7 @@
                             "id": 62
                         },
                         {
-                            "descricao": "Shirink",
+                            "descricao": "Shrink",
                             "id": 63
                         },
                         {
@@ -11779,7 +11775,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:28.939-03:00",
+            "create_at": "2025-12-12T08:51:44.119-03:00",
             "data": [
                 {
                     "id": 181,
@@ -11912,7 +11908,7 @@
                             "id": 62
                         },
                         {
-                            "descricao": "Shirink",
+                            "descricao": "Shrink",
                             "id": 63
                         },
                         {
@@ -11936,7 +11932,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:29.267-03:00",
+            "create_at": "2025-12-12T08:51:44.438-03:00",
             "data": [
                 {
                     "id": 182,
@@ -11995,7 +11991,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:29.630-03:00",
+            "create_at": "2025-12-12T08:51:44.804-03:00",
             "data": [
                 {
                     "id": 183,
@@ -12169,7 +12165,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:29.945-03:00",
+            "create_at": "2025-12-12T08:51:45.135-03:00",
             "data": [
                 {
                     "id": 184,
@@ -12195,16 +12191,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Conveniado",
                             "id": 69
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -12223,7 +12219,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:30.313-03:00",
+            "create_at": "2025-12-12T08:51:45.498-03:00",
             "data": [
                 {
                     "id": 185,
@@ -12249,16 +12245,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Conveniado",
                             "id": 69
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -12277,7 +12273,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:30.664-03:00",
+            "create_at": "2025-12-12T08:51:45.882-03:00",
             "data": [
                 {
                     "id": 186,
@@ -12308,16 +12304,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Conveniado",
                             "id": 69
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -12336,7 +12332,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:31.029-03:00",
+            "create_at": "2025-12-12T08:51:46.253-03:00",
             "data": [
                 {
                     "id": 187,
@@ -12367,16 +12363,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Conveniado",
                             "id": 69
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -12395,7 +12391,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:31.403-03:00",
+            "create_at": "2025-12-12T08:51:46.615-03:00",
             "data": [
                 {
                     "id": 188,
@@ -12421,10 +12417,6 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
@@ -12435,6 +12427,10 @@
                         {
                             "descricao": "Plastificação",
                             "id": 71
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -12453,7 +12449,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:31.775-03:00",
+            "create_at": "2025-12-12T08:51:46.974-03:00",
             "data": [
                 {
                     "id": 189,
@@ -12479,10 +12475,6 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
@@ -12493,6 +12485,10 @@
                         {
                             "descricao": "Plastificação",
                             "id": 71
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -12511,7 +12507,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:32.142-03:00",
+            "create_at": "2025-12-12T08:51:47.343-03:00",
             "data": [
                 {
                     "id": 190,
@@ -12542,10 +12538,6 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
@@ -12556,6 +12548,10 @@
                         {
                             "descricao": "Plastificação",
                             "id": 71
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -12574,7 +12570,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:32.518-03:00",
+            "create_at": "2025-12-12T08:51:47.723-03:00",
             "data": [
                 {
                     "id": 191,
@@ -12605,10 +12601,6 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
@@ -12619,6 +12611,10 @@
                         {
                             "descricao": "Plastificação",
                             "id": 71
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -12637,7 +12633,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:32.890-03:00",
+            "create_at": "2025-12-12T08:51:48.082-03:00",
             "data": [
                 {
                     "id": 192,
@@ -12663,16 +12659,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Conveniado",
                             "id": 69
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -12691,7 +12687,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:33.277-03:00",
+            "create_at": "2025-12-12T08:51:48.457-03:00",
             "data": [
                 {
                     "id": 193,
@@ -12717,16 +12713,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Conveniado",
                             "id": 69
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -12745,7 +12741,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:33.671-03:00",
+            "create_at": "2025-12-12T08:51:48.807-03:00",
             "data": [
                 {
                     "id": 194,
@@ -12776,16 +12772,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Conveniado",
                             "id": 69
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -12804,7 +12800,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:34.044-03:00",
+            "create_at": "2025-12-12T08:51:49.165-03:00",
             "data": [
                 {
                     "id": 195,
@@ -12835,16 +12831,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Conveniado",
                             "id": 69
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -12863,7 +12859,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:34.398-03:00",
+            "create_at": "2025-12-12T08:51:49.519-03:00",
             "data": [
                 {
                     "id": 196,
@@ -12889,10 +12885,6 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
@@ -12903,6 +12895,10 @@
                         {
                             "descricao": "Plastificação",
                             "id": 71
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -12921,7 +12917,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:34.776-03:00",
+            "create_at": "2025-12-12T08:51:49.891-03:00",
             "data": [
                 {
                     "id": 197,
@@ -12947,10 +12943,6 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
@@ -12961,6 +12953,10 @@
                         {
                             "descricao": "Plastificação",
                             "id": 71
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -12979,7 +12975,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:35.154-03:00",
+            "create_at": "2025-12-12T08:51:50.269-03:00",
             "data": [
                 {
                     "id": 198,
@@ -13010,10 +13006,6 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
@@ -13024,6 +13016,10 @@
                         {
                             "descricao": "Plastificação",
                             "id": 71
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -13042,7 +13038,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:35.535-03:00",
+            "create_at": "2025-12-12T08:51:50.634-03:00",
             "data": [
                 {
                     "id": 199,
@@ -13073,10 +13069,6 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
@@ -13087,6 +13079,10 @@
                         {
                             "descricao": "Plastificação",
                             "id": 71
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -13105,7 +13101,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:35.896-03:00",
+            "create_at": "2025-12-12T08:51:50.995-03:00",
             "data": [
                 {
                     "id": 202,
@@ -13131,16 +13127,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Conveniado",
                             "id": 69
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -13159,7 +13155,7 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:36.261-03:00",
+            "create_at": "2025-12-12T08:51:51.366-03:00",
             "data": [
                 {
                     "id": 203,
@@ -13173,8 +13169,8 @@
                             "largura": 0,
                             "perguntas_componente": null,
                             "quantidade_paginas": 2,
-                            "idgruposubstratoimpressao": 109,
-                            "descgruposubstratoimpressao": "Papel Offset Formato A4",
+                            "idgruposubstratoimpressao": 30,
+                            "descgruposubstratoimpressao": "Couchê Brilho",
                             "gramaturasubstratoimpressao": 0,
                             "corfrente": 4,
                             "corverso": 4,
@@ -13185,16 +13181,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Conveniado",
                             "id": 69
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
@@ -13213,11 +13209,11 @@
             "success": true,
             "code": 200,
             "message": "Sucesso!",
-            "create_at": "2025-12-04T14:29:36.625-03:00",
+            "create_at": "2025-12-12T08:51:51.721-03:00",
             "data": [
                 {
                     "id": 204,
-                    "descricao": "Avulso Adesivo (Colorido SF) - Conveniado",
+                    "descricao": "Avulso Adesivo 173g (Colorido SF) - Conveniado",
                     "quantidade": 0,
                     "componentes": [
                         {
@@ -13239,16 +13235,16 @@
                     "perguntas_gerais": null,
                     "tarefas_gerais": [
                         {
-                            "descricao": "Grampo simples",
-                            "id": 22
-                        },
-                        {
                             "descricao": "Encaixotamento \/ Expedição",
                             "id": 62
                         },
                         {
                             "descricao": "Conveniado",
                             "id": 69
+                        },
+                        {
+                            "descricao": "Avulso",
+                            "id": 73
                         }
                     ]
                 }
