@@ -4,9 +4,9 @@
 
 WITH parametros AS (
     SELECT
-		2 AS escola_id,                 
-        149 AS id_produto,              
-        ARRAY[]::date[] AS datas_saida
+		1 AS escola_id,                 
+        178 AS id_produto,              
+        ARRAY['2025-12-19', '2025-12-26']::date[] AS datas_saida
 ),
 
 unidades_filtradas AS (
