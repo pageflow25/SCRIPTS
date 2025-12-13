@@ -1,12 +1,12 @@
 -- ========================================
--- SQL FINAL - CORREÇÃO GRAMATURA SOMENTE NO MIOLO
+-- SQL FINAL - COM ARRAY DE PRODUTOS
 -- ========================================
 
 WITH parametros AS (
     SELECT
-		1 AS escola_id,                 
-        178 AS id_produto,              
-        ARRAY['2025-12-19', '2025-12-26']::date[] AS datas_saida
+        15 AS escola_id,                 
+        ARRAY[227, 228, 229, 230] AS ids_produtos, -- <--- ALTERADO PARA ARRAY (Ex: ARRAY[227, 228, 300])
+        ARRAY['2025-12-19', '2025-12-29', '2025-12-31', '2026-01-06']::date[] AS datas_saida
 ),
 
 unidades_filtradas AS (
@@ -48,13 +48,14 @@ especificacoes_unidade AS (
     LEFT JOIN bremen_tamanho_papel bt ON bt.id = ef.id_papel
     LEFT JOIN arquivo_pdfs ap ON ap.item_pedido_id = ef.id
     LEFT JOIN bremen_itens bi ON bi.id_produto = ef.id_produto 
-	WHERE dm.quantidade > 0
-   	 	AND (p.id_produto IS NULL OR ef.id_produto = p.id_produto)
-    	AND (
-        	p.datas_saida IS NULL
-        	OR NULLIF(dm.data_saida, '')::date = ANY(p.datas_saida)
-        	OR NULLIF(dm.data_saida, '') IS NULL
-    	)
+    WHERE dm.quantidade > 0
+        -- ALTERAÇÃO AQUI: Verifica se o produto está DENTRO do array ou se o array é nulo
+        AND (p.ids_produtos IS NULL OR ef.id_produto = ANY(p.ids_produtos))
+        AND (
+            p.datas_saida IS NULL
+            OR NULLIF(dm.data_saida, '')::date = ANY(p.datas_saida)
+            OR NULLIF(dm.data_saida, '') IS NULL
+        )
 ),
 
 itens_produto AS (
@@ -66,23 +67,23 @@ itens_produto AS (
         MAX(eu.especificacao_id) AS especificacao_id,
         MAX(eu.id_produto) AS id_produto,
         (
-        	COALESCE(
-        	    MAX(CASE WHEN LOWER(eu.tipo_arquivo) = 'capa' THEN REPLACE(LOWER(eu.arquivo_nome), '.pdf', '') END),
-        	    MAX(CASE WHEN LOWER(eu.tipo_arquivo) = 'miolo' THEN REPLACE(LOWER(eu.arquivo_nome), '.pdf', '') END),
-        	    MAX(REPLACE(LOWER(eu.arquivo_nome), '.pdf', ''))
-        	) || ' | (#' || MAX(form.id) || ')'
+            COALESCE(
+                MAX(CASE WHEN LOWER(eu.tipo_arquivo) = 'capa' THEN REPLACE(LOWER(eu.arquivo_nome), '.pdf', '') END),
+                MAX(CASE WHEN LOWER(eu.tipo_arquivo) = 'miolo' THEN REPLACE(LOWER(eu.arquivo_nome), '.pdf', '') END),
+                MAX(REPLACE(LOWER(eu.arquivo_nome), '.pdf', ''))
+            ) || ' (#' || MAX(form.id) || ')'
         ) AS nome_arquivo,
         MAX(eu.altura_mm) AS altura,
         MAX(eu.largura_mm) AS largura,
         MAX(eu.gramatura_miolo) AS gramatura_miolo,
         MAX(eu.quantidade) AS quantidade_total,
         
-		CASE
-    		WHEN (MAX(eu.paginas) > 2 AND UPPER(MAX(eu.frente_verso)) = 'FV' AND UPPER(MAX(eu."categoria_Prod")) = 'PROVA')
-    		  OR (MAX(eu.paginas) > 1 AND UPPER(MAX(eu.frente_verso)) = 'SF' AND UPPER(MAX(eu."categoria_Prod")) = 'PROVA')
-    		THEN 'normal'
-    		ELSE 'separado'
-		END AS tipo_agrupamento
+        CASE
+            WHEN (MAX(eu.paginas) > 2 AND UPPER(MAX(eu.frente_verso)) = 'FV' AND UPPER(MAX(eu."categoria_Prod")) = 'PROVA')
+              OR (MAX(eu.paginas) > 1 AND UPPER(MAX(eu.frente_verso)) = 'SF' AND UPPER(MAX(eu."categoria_Prod")) = 'PROVA')
+            THEN 'normal'
+            ELSE 'separado'
+        END AS tipo_agrupamento
 
     FROM especificacoes_unidade eu
     join formularios form on form.id = eu.formulario_id
@@ -299,12 +300,12 @@ SELECT json_build_object(
                     ), '[]'::json),
                     'perguntas_gerais', COALESCE((
                         SELECT json_agg(
-							json_build_object(
-							  'tipo', bp.tipo,
-							  'pergunta', bp.nome,
-							  'resposta', rg.resposta,
-							  'id_pergunta', bp.id_pergunta
-							)
+                            json_build_object(
+                              'tipo', bp.tipo,
+                              'pergunta', bp.nome,
+                              'resposta', rg.resposta,
+                              'id_pergunta', bp.id_pergunta
+                            )
                         )
                         FROM bremen_perguntas bp
                         INNER JOIN respostas_gerais rg ON rg.pergunta_id = bp.id AND rg.especificacao_id = ip.especificacao_id
