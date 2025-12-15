@@ -1,0 +1,17 @@
+2025-12-15 08:36:48,879 - ERROR - Erro ao conectar ao banco: 'utf-8' codec can't decode byte 0xe7 in position 78: invalid continuation byte
+2025-12-15 08:39:25,809 - INFO - Erro ao conectar ao banco: could not translate host name "http://aws-1-sa-east-1.pooler.supabase.com" to address: Name or service not known
+
+2025-12-15 08:41:31,964 - INFO - INICIANDO AUTOMAÇÃO DE ORÇAMENTOS
+2025-12-15 08:41:31,964 - INFO - Lendo arquivo SQL 'sql_orcamento.sql'...
+2025-12-15 08:41:31,979 - INFO - Executando query no Supabase para gerar JSONs...
+2025-12-15 08:41:32,048 - INFO - Erro Crítico no Script: syntax error at or near ":"
+LINE 8:     WHERE ue.escola_id = :escola_id
+                                 ^
+
+2025-12-15 08:41:58,268 - INFO - INICIANDO AUTOMAÇÃO DE ORÇAMENTOS
+2025-12-15 08:41:58,268 - INFO - Lendo arquivo SQL 'sql_orcamento.sql'...
+2025-12-15 08:41:58,269 - INFO - Executando query no Supabase para gerar JSONs...
+2025-12-15 08:41:58,334 - INFO - Erro Crítico no Script: syntax error at or near ":"
+LINE 8:     WHERE ue.escola_id = :escola_id
+                                 ^
+

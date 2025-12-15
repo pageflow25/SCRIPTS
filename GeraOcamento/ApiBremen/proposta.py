@@ -4,66 +4,34 @@ import json
 reqUrl = "http://192.168.1.10:9001/api/v1/proposta/aprovar"
 
 headersList = {
- "Accept": "*/*",
- "Authorization": "Bearer ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SjFjM1ZoY21sdklqb2ljR0ZuWldac2IzY2lMQ0p1ZFcxbGNtOWZjMlZ5YVdVaU9pSXdNemc1TWlJc0ltVjRjQ0k2TVRjMk5ESTJPVFEyT1gwLkZOd1ZOQWVZUGNVdnFOQl9CV0FvSWVESnVFVEltRVc1R0VOTFF0cmh3bjA=",
- "Content-Type": "application/json"
+    "Accept": "*/*",
+    "Authorization": "Bearer ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SjFjM1ZoY21sdklqb2ljR0ZuWldac2IzY2lMQ0p1ZFcxbGNtOWZjMlZ5YVdVaU9pSXdNemc1TWlJc0ltVjRjQ0k2TVRjMk5UZ3dOak01TjMwLnlRTDZCRVF5RGVVczdLZFJkdW5nTzBRb3JEV3p6ZkxuYTRBTURGOFJDMjQ=",
+    "Content-Type": "application/json"
 }
 
-payload = json.dumps({
+payload = {
     "identifier": "PageFlow",
     "data": {
-    "id_orcamento": 226,
-    "gerar_op": True,
-    "itens": [
-      {
-         "id": 591
-      },
+        "id_orcamento": 1131,
+        "gerar_op": True,
+        "itens": [
             {
-         "id": 592
-      },
-      
+                "id": 19619,
+                "data_entrega": "2025-12-19T12:00:00.000-03:00"
+            },
             {
-         "id": 593
-      }
-      ,
+                "id": 19620,
+                "data_entrega": "2025-12-19T12:00:00.000-03:00"
+            },
             {
-         "id": 594
-      }
-      ,
-            {
-         "id": 595
-      }
-      ,
-            {
-         "id": 596
-      }
-      ,
-            {
-         "id": 597
-      }
-,
-            {
-         "id": 598
-      },
-            {
-         "id": 599
-      },
-            {
-         "id": 600
-      },
-            {
-         "id": 601
-      },
-            {
-         "id": 602
-      },
-            {
-         "id": 603
-      }
-    ]
-  }
-})
+                "id": 19621,
+                "data_entrega": "2025-12-19T12:00:00.000-03:00"
+            }
+        ]
+    }
+}
 
-response = requests.request("POST", reqUrl, data=payload,  headers=headersList)
+response = requests.post(reqUrl, json=payload, headers=headersList)
 
+print(response.status_code)
 print(response.text)

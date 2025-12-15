@@ -1,0 +1,16 @@
+2025-12-15 15:36:26,612 - INFO - 
+================================================================================
+2025-12-15 15:36:26,613 - INFO - INICIANDO LOOP DE AUTOMACAO (SEM SAVE)
+2025-12-15 15:36:26,613 - INFO - ================================================================================
+2025-12-15 15:36:26,894 - INFO - Conexão com banco de dados estabelecida
+2025-12-15 15:36:26,894 - INFO - 
+--- Lendo dados de origem do banco ---
+2025-12-15 15:36:26,908 - INFO - Executando SQL de orçamento para escola_id=15
+2025-12-15 15:36:26,994 - WARNING - [AVISO] Nenhum dado encontrado para processar
+2025-12-15 15:36:26,995 - INFO - Conexão com banco de dados fechada
+2025-12-15 15:36:26,995 - INFO - 
+================================================================================
+2025-12-15 15:36:26,995 - INFO - FIM DO PROCESSAMENTO (MODO NO-DB-SAVE)
+2025-12-15 15:36:26,995 - INFO - Orcamentos criados (API): 0
+2025-12-15 15:36:26,995 - INFO - Propostas aprovadas (API): 0
+2025-12-15 15:36:26,995 - INFO - ================================================================================

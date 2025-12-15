@@ -1,56 +1,66 @@
 {
     "identifier": "PageFlow",
     "data": {
-        "id_cliente": 2,
+        "id_cliente": 331,
         "id_vendedor": 3,
         "id_forma_pagamento": "1",
         "itens": [
             {
-                "id_produto": 178,
-                "descricao": "processo_automacao_distribuicao_materiais | (#349)",
-                "quantidade": 4,
+                "id_produto": 229,
+                "descricao": "fr_grupo_salta_2026 (#361)",
+                "quantidade": 13180,
                 "usar_listapreco": 1,
                 "manter_estrutura_mod_produto": 1,
                 "componentes": [
                     {
-                        "id": 424,
-                        "altura": 14.80,
-                        "largura": 21.00,
-                        "descricao": "Capa",
-                        "quantidade_paginas": 1,
-                        "perguntas_componente": [
-                            {
-                                "tipo": "Opções",
-                                "pergunta": "Laminação ?",
-                                "resposta": "Frente/Verso",
-                                "id_pergunta": 3
-                            },
-                            {
-                                "tipo": "Opções",
-                                "pergunta": "Tipo BOPP?",
-                                "resposta": "Fosco",
-                                "id_pergunta": 4
-                            }
-                        ]
-                    },
-                    {
-                        "id": 425,
-                        "altura": 14.80,
+                        "id": 483,
+                        "altura": 29.70,
                         "largura": 21.00,
                         "descricao": "Miolo",
-                        "quantidade_paginas": 2,
+                        "quantidade_paginas": 1,
                         "perguntas_componente": [],
-                        "gramaturasubstratoimpressao": 90.00
+                        "gramaturasubstratoimpressao": 75.00
                     }
                 ],
-                "perguntas_gerais": [
+                "perguntas_gerais": []
+            },
+            {
+                "id_produto": 230,
+                "descricao": "cr_grupo_salta_2026 (#362)",
+                "quantidade": 13180,
+                "usar_listapreco": 1,
+                "manter_estrutura_mod_produto": 1,
+                "componentes": [
                     {
-                        "tipo": "Opções",
-                        "pergunta": "Orelha ?",
-                        "resposta": "Com Orelha",
-                        "id_pergunta": 36
+                        "id": 484,
+                        "altura": 29.70,
+                        "largura": 21.00,
+                        "descricao": "Miolo",
+                        "quantidade_paginas": 1,
+                        "perguntas_componente": [],
+                        "gramaturasubstratoimpressao": 75.00
                     }
-                ]
+                ],
+                "perguntas_gerais": []
+            },
+            {
+                "id_produto": 227,
+                "descricao": "cr_pas_2026 (#363)",
+                "quantidade": 13180,
+                "usar_listapreco": 1,
+                "manter_estrutura_mod_produto": 1,
+                "componentes": [
+                    {
+                        "id": 481,
+                        "altura": 29.70,
+                        "largura": 21.00,
+                        "descricao": "Miolo",
+                        "quantidade_paginas": 1,
+                        "perguntas_componente": [],
+                        "gramaturasubstratoimpressao": 75.00
+                    }
+                ],
+                "perguntas_gerais": []
             }
         ]
     }

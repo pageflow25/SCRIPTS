@@ -1,0 +1,1243 @@
+2025-12-15 14:12:35,196 - INFO - 
+================================================================================
+2025-12-15 14:12:35,197 - INFO - INICIANDO LOOP DE AUTOMACAO (SEM SAVE)
+2025-12-15 14:12:35,197 - INFO - ================================================================================
+2025-12-15 14:12:35,475 - INFO - Conexão com banco de dados estabelecida
+2025-12-15 14:12:35,476 - INFO - 
+--- Lendo dados de origem do banco ---
+2025-12-15 14:12:35,476 - INFO - Executando SQL de orçamento para escola_id=15
+2025-12-15 14:12:35,648 - INFO - [OK] 36 registros encontrados para processamento
+2025-12-15 14:12:35,717 - INFO - Obtidas 3 datas de entrega para escola_id=15
+2025-12-15 14:12:35,717 - INFO - 
+--- Iniciando Loop de Processamento ---
+2025-12-15 14:12:35,717 - INFO - 
+================================================================================
+2025-12-15 14:12:35,717 - INFO - ITEM 1/36
+2025-12-15 14:12:35,718 - INFO - ================================================================================
+2025-12-15 14:12:35,718 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:12:35,718 - INFO - ================================================================================
+2025-12-15 14:12:35,718 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:12:35,718 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:12:35,718 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:12:37,331 - INFO - Status da resposta: 200
+2025-12-15 14:12:37,331 - INFO - ✓ Orçamento criado com sucesso - ID: 1193
+2025-12-15 14:12:37,331 - INFO - [OK] Orcamento criado na API - ID: 1193
+2025-12-15 14:12:37,332 - INFO - [OK] Total de itens: 3
+2025-12-15 14:12:37,332 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:12:37,332 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:12:37,332 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:12:37,332 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:12:37,332 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:12:37,332 - INFO - Orçamento ID: 1193, Itens: 3
+2025-12-15 14:12:41,068 - INFO - Status da resposta: 200
+2025-12-15 14:12:41,068 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1193
+2025-12-15 14:12:41,068 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1193
+2025-12-15 14:12:41,069 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:12:41,069 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:12:41,069 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:12:41,069 - INFO - 
+================================================================================
+2025-12-15 14:12:41,069 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:12:41,069 - INFO - ================================================================================
+2025-12-15 14:12:42,070 - INFO - 
+================================================================================
+2025-12-15 14:12:42,070 - INFO - ITEM 2/36
+2025-12-15 14:12:42,070 - INFO - ================================================================================
+2025-12-15 14:12:42,070 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:12:42,070 - INFO - ================================================================================
+2025-12-15 14:12:42,071 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:12:42,071 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:12:42,071 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:12:42,990 - INFO - Status da resposta: 200
+2025-12-15 14:12:42,990 - INFO - ✓ Orçamento criado com sucesso - ID: 1194
+2025-12-15 14:12:42,991 - INFO - [OK] Orcamento criado na API - ID: 1194
+2025-12-15 14:12:42,991 - INFO - [OK] Total de itens: 1
+2025-12-15 14:12:42,991 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:12:42,991 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:12:42,991 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:12:42,992 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:12:42,992 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:12:42,992 - INFO - Orçamento ID: 1194, Itens: 1
+2025-12-15 14:12:44,910 - INFO - Status da resposta: 200
+2025-12-15 14:12:44,910 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1194
+2025-12-15 14:12:44,910 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1194
+2025-12-15 14:12:44,910 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:12:44,910 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:12:44,910 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:12:44,910 - INFO - 
+================================================================================
+2025-12-15 14:12:44,911 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:12:44,911 - INFO - ================================================================================
+2025-12-15 14:12:45,911 - INFO - 
+================================================================================
+2025-12-15 14:12:45,911 - INFO - ITEM 3/36
+2025-12-15 14:12:45,912 - INFO - ================================================================================
+2025-12-15 14:12:45,912 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:12:45,912 - INFO - ================================================================================
+2025-12-15 14:12:45,912 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:12:45,912 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:12:45,912 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:12:47,424 - INFO - Status da resposta: 200
+2025-12-15 14:12:47,424 - INFO - ✓ Orçamento criado com sucesso - ID: 1195
+2025-12-15 14:12:47,424 - INFO - [OK] Orcamento criado na API - ID: 1195
+2025-12-15 14:12:47,425 - INFO - [OK] Total de itens: 3
+2025-12-15 14:12:47,425 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:12:47,425 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:12:47,425 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:12:47,425 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:12:47,425 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:12:47,425 - INFO - Orçamento ID: 1195, Itens: 3
+2025-12-15 14:12:51,162 - INFO - Status da resposta: 200
+2025-12-15 14:12:51,163 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1195
+2025-12-15 14:12:51,163 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1195
+2025-12-15 14:12:51,163 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:12:51,163 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:12:51,163 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:12:51,163 - INFO - 
+================================================================================
+2025-12-15 14:12:51,164 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:12:51,164 - INFO - ================================================================================
+2025-12-15 14:12:52,165 - INFO - 
+================================================================================
+2025-12-15 14:12:52,165 - INFO - ITEM 4/36
+2025-12-15 14:12:52,165 - INFO - ================================================================================
+2025-12-15 14:12:52,165 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:12:52,166 - INFO - ================================================================================
+2025-12-15 14:12:52,166 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:12:52,166 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:12:52,166 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:12:53,072 - INFO - Status da resposta: 200
+2025-12-15 14:12:53,072 - INFO - ✓ Orçamento criado com sucesso - ID: 1196
+2025-12-15 14:12:53,072 - INFO - [OK] Orcamento criado na API - ID: 1196
+2025-12-15 14:12:53,072 - INFO - [OK] Total de itens: 1
+2025-12-15 14:12:53,072 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:12:53,072 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:12:53,073 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:12:53,073 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:12:53,073 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:12:53,073 - INFO - Orçamento ID: 1196, Itens: 1
+2025-12-15 14:12:55,004 - INFO - Status da resposta: 200
+2025-12-15 14:12:55,005 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1196
+2025-12-15 14:12:55,005 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1196
+2025-12-15 14:12:55,005 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:12:55,005 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:12:55,005 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:12:55,005 - INFO - 
+================================================================================
+2025-12-15 14:12:55,005 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:12:55,006 - INFO - ================================================================================
+2025-12-15 14:12:56,006 - INFO - 
+================================================================================
+2025-12-15 14:12:56,006 - INFO - ITEM 5/36
+2025-12-15 14:12:56,006 - INFO - ================================================================================
+2025-12-15 14:12:56,007 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:12:56,007 - INFO - ================================================================================
+2025-12-15 14:12:56,007 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:12:56,007 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:12:56,007 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:12:57,511 - INFO - Status da resposta: 200
+2025-12-15 14:12:57,512 - INFO - ✓ Orçamento criado com sucesso - ID: 1197
+2025-12-15 14:12:57,512 - INFO - [OK] Orcamento criado na API - ID: 1197
+2025-12-15 14:12:57,512 - INFO - [OK] Total de itens: 3
+2025-12-15 14:12:57,512 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:12:57,512 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:12:57,512 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:12:57,513 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:12:57,513 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:12:57,513 - INFO - Orçamento ID: 1197, Itens: 3
+2025-12-15 14:13:01,253 - INFO - Status da resposta: 200
+2025-12-15 14:13:01,253 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1197
+2025-12-15 14:13:01,253 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1197
+2025-12-15 14:13:01,253 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:13:01,254 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:13:01,254 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:01,254 - INFO - 
+================================================================================
+2025-12-15 14:13:01,254 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:13:01,254 - INFO - ================================================================================
+2025-12-15 14:13:02,254 - INFO - 
+================================================================================
+2025-12-15 14:13:02,255 - INFO - ITEM 6/36
+2025-12-15 14:13:02,255 - INFO - ================================================================================
+2025-12-15 14:13:02,255 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:13:02,255 - INFO - ================================================================================
+2025-12-15 14:13:02,256 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:13:02,256 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:13:02,256 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:13:03,188 - INFO - Status da resposta: 200
+2025-12-15 14:13:03,188 - INFO - ✓ Orçamento criado com sucesso - ID: 1198
+2025-12-15 14:13:03,188 - INFO - [OK] Orcamento criado na API - ID: 1198
+2025-12-15 14:13:03,188 - INFO - [OK] Total de itens: 1
+2025-12-15 14:13:03,189 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:13:03,189 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:03,189 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:13:03,189 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:13:03,189 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:13:03,189 - INFO - Orçamento ID: 1198, Itens: 1
+2025-12-15 14:13:05,117 - INFO - Status da resposta: 200
+2025-12-15 14:13:05,118 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1198
+2025-12-15 14:13:05,118 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1198
+2025-12-15 14:13:05,118 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:13:05,118 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:13:05,118 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:05,119 - INFO - 
+================================================================================
+2025-12-15 14:13:05,119 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:13:05,119 - INFO - ================================================================================
+2025-12-15 14:13:06,119 - INFO - 
+================================================================================
+2025-12-15 14:13:06,120 - INFO - ITEM 7/36
+2025-12-15 14:13:06,120 - INFO - ================================================================================
+2025-12-15 14:13:06,120 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:13:06,120 - INFO - ================================================================================
+2025-12-15 14:13:06,120 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:13:06,120 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:13:06,120 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:13:07,621 - INFO - Status da resposta: 200
+2025-12-15 14:13:07,622 - INFO - ✓ Orçamento criado com sucesso - ID: 1199
+2025-12-15 14:13:07,622 - INFO - [OK] Orcamento criado na API - ID: 1199
+2025-12-15 14:13:07,622 - INFO - [OK] Total de itens: 3
+2025-12-15 14:13:07,622 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:13:07,622 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:07,622 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:13:07,623 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:13:07,623 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:13:07,623 - INFO - Orçamento ID: 1199, Itens: 3
+2025-12-15 14:13:11,394 - INFO - Status da resposta: 200
+2025-12-15 14:13:11,394 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1199
+2025-12-15 14:13:11,395 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1199
+2025-12-15 14:13:11,395 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:13:11,395 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:13:11,395 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:11,395 - INFO - 
+================================================================================
+2025-12-15 14:13:11,395 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:13:11,395 - INFO - ================================================================================
+2025-12-15 14:13:12,396 - INFO - 
+================================================================================
+2025-12-15 14:13:12,922 - INFO - ITEM 8/36
+2025-12-15 14:13:12,922 - INFO - ================================================================================
+2025-12-15 14:13:12,922 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:13:12,923 - INFO - ================================================================================
+2025-12-15 14:13:12,923 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:13:12,923 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:13:12,923 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:13:14,438 - INFO - Status da resposta: 200
+2025-12-15 14:13:14,439 - INFO - ✓ Orçamento criado com sucesso - ID: 1200
+2025-12-15 14:13:14,439 - INFO - [OK] Orcamento criado na API - ID: 1200
+2025-12-15 14:13:14,439 - INFO - [OK] Total de itens: 3
+2025-12-15 14:13:14,439 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:13:14,440 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:14,440 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:13:14,440 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:13:14,440 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:13:14,440 - INFO - Orçamento ID: 1200, Itens: 3
+2025-12-15 14:13:19,115 - INFO - Status da resposta: 200
+2025-12-15 14:13:19,115 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1200
+2025-12-15 14:13:19,116 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1200
+2025-12-15 14:13:19,116 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:13:19,116 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:13:19,116 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:19,116 - INFO - 
+================================================================================
+2025-12-15 14:13:19,117 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:13:19,117 - INFO - ================================================================================
+2025-12-15 14:13:20,117 - INFO - 
+================================================================================
+2025-12-15 14:13:20,118 - INFO - ITEM 9/36
+2025-12-15 14:13:20,118 - INFO - ================================================================================
+2025-12-15 14:13:20,118 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:13:20,118 - INFO - ================================================================================
+2025-12-15 14:13:20,118 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:13:20,118 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:13:20,118 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:13:21,358 - INFO - Status da resposta: 200
+2025-12-15 14:13:21,358 - INFO - ✓ Orçamento criado com sucesso - ID: 1201
+2025-12-15 14:13:21,359 - INFO - [OK] Orcamento criado na API - ID: 1201
+2025-12-15 14:13:21,359 - INFO - [OK] Total de itens: 2
+2025-12-15 14:13:21,359 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:13:21,359 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:21,359 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:13:21,359 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:13:21,360 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:13:21,360 - INFO - Orçamento ID: 1201, Itens: 2
+2025-12-15 14:13:24,194 - INFO - Status da resposta: 200
+2025-12-15 14:13:24,195 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1201
+2025-12-15 14:13:24,195 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1201
+2025-12-15 14:13:24,195 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:13:24,195 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:13:24,195 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:24,195 - INFO - 
+================================================================================
+2025-12-15 14:13:24,195 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:13:24,196 - INFO - ================================================================================
+2025-12-15 14:13:25,196 - INFO - 
+================================================================================
+2025-12-15 14:13:25,196 - INFO - ITEM 10/36
+2025-12-15 14:13:25,196 - INFO - ================================================================================
+2025-12-15 14:13:25,196 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:13:25,196 - INFO - ================================================================================
+2025-12-15 14:13:25,196 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:13:25,197 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:13:25,197 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:13:26,716 - INFO - Status da resposta: 200
+2025-12-15 14:13:26,716 - INFO - ✓ Orçamento criado com sucesso - ID: 1202
+2025-12-15 14:13:26,717 - INFO - [OK] Orcamento criado na API - ID: 1202
+2025-12-15 14:13:26,717 - INFO - [OK] Total de itens: 3
+2025-12-15 14:13:26,717 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:13:26,717 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:26,717 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:13:26,717 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:13:26,717 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:13:26,717 - INFO - Orçamento ID: 1202, Itens: 3
+2025-12-15 14:13:30,500 - INFO - Status da resposta: 200
+2025-12-15 14:13:30,500 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1202
+2025-12-15 14:13:30,501 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1202
+2025-12-15 14:13:30,501 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:13:30,501 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:13:30,501 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:30,501 - INFO - 
+================================================================================
+2025-12-15 14:13:30,501 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:13:30,501 - INFO - ================================================================================
+2025-12-15 14:13:31,502 - INFO - 
+================================================================================
+2025-12-15 14:13:31,502 - INFO - ITEM 11/36
+2025-12-15 14:13:31,502 - INFO - ================================================================================
+2025-12-15 14:13:31,503 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:13:31,503 - INFO - ================================================================================
+2025-12-15 14:13:31,503 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:13:31,503 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:13:31,503 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:13:32,736 - INFO - Status da resposta: 200
+2025-12-15 14:13:32,736 - INFO - ✓ Orçamento criado com sucesso - ID: 1203
+2025-12-15 14:13:32,736 - INFO - [OK] Orcamento criado na API - ID: 1203
+2025-12-15 14:13:32,736 - INFO - [OK] Total de itens: 2
+2025-12-15 14:13:32,737 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:13:32,737 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:32,737 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:13:32,737 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:13:32,737 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:13:32,737 - INFO - Orçamento ID: 1203, Itens: 2
+2025-12-15 14:13:35,594 - INFO - Status da resposta: 200
+2025-12-15 14:13:35,594 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1203
+2025-12-15 14:13:35,595 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1203
+2025-12-15 14:13:35,595 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:13:35,595 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:13:35,595 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:35,595 - INFO - 
+================================================================================
+2025-12-15 14:13:35,595 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:13:35,595 - INFO - ================================================================================
+2025-12-15 14:13:36,596 - INFO - 
+================================================================================
+2025-12-15 14:13:36,596 - INFO - ITEM 12/36
+2025-12-15 14:13:36,596 - INFO - ================================================================================
+2025-12-15 14:13:36,596 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:13:36,596 - INFO - ================================================================================
+2025-12-15 14:13:36,597 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:13:36,597 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:13:36,597 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:13:38,159 - INFO - Status da resposta: 200
+2025-12-15 14:13:38,159 - INFO - ✓ Orçamento criado com sucesso - ID: 1204
+2025-12-15 14:13:38,159 - INFO - [OK] Orcamento criado na API - ID: 1204
+2025-12-15 14:13:38,159 - INFO - [OK] Total de itens: 3
+2025-12-15 14:13:38,159 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:13:38,160 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:38,160 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:13:38,160 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:13:38,160 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:13:38,160 - INFO - Orçamento ID: 1204, Itens: 3
+2025-12-15 14:13:41,939 - INFO - Status da resposta: 200
+2025-12-15 14:13:41,940 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1204
+2025-12-15 14:13:41,940 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1204
+2025-12-15 14:13:41,940 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:13:41,940 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:13:41,940 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:41,941 - INFO - 
+================================================================================
+2025-12-15 14:13:41,941 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:13:41,941 - INFO - ================================================================================
+2025-12-15 14:13:42,941 - INFO - 
+================================================================================
+2025-12-15 14:13:42,942 - INFO - ITEM 13/36
+2025-12-15 14:13:42,942 - INFO - ================================================================================
+2025-12-15 14:13:42,942 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:13:42,942 - INFO - ================================================================================
+2025-12-15 14:13:42,942 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:13:42,942 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:13:42,942 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:13:44,181 - INFO - Status da resposta: 200
+2025-12-15 14:13:44,181 - INFO - ✓ Orçamento criado com sucesso - ID: 1205
+2025-12-15 14:13:44,182 - INFO - [OK] Orcamento criado na API - ID: 1205
+2025-12-15 14:13:44,182 - INFO - [OK] Total de itens: 2
+2025-12-15 14:13:44,182 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:13:44,182 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:44,182 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:13:44,182 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:13:44,182 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:13:44,182 - INFO - Orçamento ID: 1205, Itens: 2
+2025-12-15 14:13:47,071 - INFO - Status da resposta: 200
+2025-12-15 14:13:47,071 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1205
+2025-12-15 14:13:47,071 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1205
+2025-12-15 14:13:47,072 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:13:47,072 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:13:47,072 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:47,072 - INFO - 
+================================================================================
+2025-12-15 14:13:47,072 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:13:47,072 - INFO - ================================================================================
+2025-12-15 14:13:48,073 - INFO - 
+================================================================================
+2025-12-15 14:13:48,073 - INFO - ITEM 14/36
+2025-12-15 14:13:48,074 - INFO - ================================================================================
+2025-12-15 14:13:48,074 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:13:48,074 - INFO - ================================================================================
+2025-12-15 14:13:48,074 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:13:48,074 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:13:48,074 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:13:49,632 - INFO - Status da resposta: 200
+2025-12-15 14:13:49,632 - INFO - ✓ Orçamento criado com sucesso - ID: 1206
+2025-12-15 14:13:49,632 - INFO - [OK] Orcamento criado na API - ID: 1206
+2025-12-15 14:13:49,632 - INFO - [OK] Total de itens: 3
+2025-12-15 14:13:49,632 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:13:49,633 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:49,633 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:13:49,633 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:13:49,633 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:13:49,633 - INFO - Orçamento ID: 1206, Itens: 3
+2025-12-15 14:13:53,423 - INFO - Status da resposta: 200
+2025-12-15 14:13:53,423 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1206
+2025-12-15 14:13:53,424 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1206
+2025-12-15 14:13:53,424 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:13:53,424 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:13:53,424 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:53,424 - INFO - 
+================================================================================
+2025-12-15 14:13:53,424 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:13:53,424 - INFO - ================================================================================
+2025-12-15 14:13:54,425 - INFO - 
+================================================================================
+2025-12-15 14:13:54,425 - INFO - ITEM 15/36
+2025-12-15 14:13:54,425 - INFO - ================================================================================
+2025-12-15 14:13:54,425 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:13:54,425 - INFO - ================================================================================
+2025-12-15 14:13:54,425 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:13:54,425 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:13:54,426 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:13:55,990 - INFO - Status da resposta: 200
+2025-12-15 14:13:55,990 - INFO - ✓ Orçamento criado com sucesso - ID: 1207
+2025-12-15 14:13:55,991 - INFO - [OK] Orcamento criado na API - ID: 1207
+2025-12-15 14:13:55,991 - INFO - [OK] Total de itens: 3
+2025-12-15 14:13:55,991 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:13:55,991 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:55,991 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:13:55,991 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:13:55,991 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:13:55,992 - INFO - Orçamento ID: 1207, Itens: 3
+2025-12-15 14:13:59,791 - INFO - Status da resposta: 200
+2025-12-15 14:13:59,792 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1207
+2025-12-15 14:13:59,792 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1207
+2025-12-15 14:13:59,792 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:13:59,792 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:13:59,792 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:13:59,792 - INFO - 
+================================================================================
+2025-12-15 14:13:59,793 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:13:59,793 - INFO - ================================================================================
+2025-12-15 14:14:00,793 - INFO - 
+================================================================================
+2025-12-15 14:14:00,793 - INFO - ITEM 16/36
+2025-12-15 14:14:00,794 - INFO - ================================================================================
+2025-12-15 14:14:00,794 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:14:00,794 - INFO - ================================================================================
+2025-12-15 14:14:00,794 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:14:00,794 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:14:00,794 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:14:02,442 - INFO - Status da resposta: 200
+2025-12-15 14:14:02,442 - INFO - ✓ Orçamento criado com sucesso - ID: 1208
+2025-12-15 14:14:02,442 - INFO - [OK] Orcamento criado na API - ID: 1208
+2025-12-15 14:14:02,442 - INFO - [OK] Total de itens: 3
+2025-12-15 14:14:02,443 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:14:02,443 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:02,443 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:14:02,443 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:14:02,443 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:14:02,443 - INFO - Orçamento ID: 1208, Itens: 3
+2025-12-15 14:14:06,586 - INFO - Status da resposta: 200
+2025-12-15 14:14:06,586 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1208
+2025-12-15 14:14:06,586 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1208
+2025-12-15 14:14:06,587 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:14:06,587 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:14:06,587 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:06,587 - INFO - 
+================================================================================
+2025-12-15 14:14:06,587 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:14:06,587 - INFO - ================================================================================
+2025-12-15 14:14:07,588 - INFO - 
+================================================================================
+2025-12-15 14:14:07,588 - INFO - ITEM 17/36
+2025-12-15 14:14:07,588 - INFO - ================================================================================
+2025-12-15 14:14:07,588 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:14:07,589 - INFO - ================================================================================
+2025-12-15 14:14:07,589 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:14:07,589 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:14:07,589 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:14:09,459 - INFO - Status da resposta: 200
+2025-12-15 14:14:09,459 - INFO - ✓ Orçamento criado com sucesso - ID: 1209
+2025-12-15 14:14:09,459 - INFO - [OK] Orcamento criado na API - ID: 1209
+2025-12-15 14:14:09,459 - INFO - [OK] Total de itens: 3
+2025-12-15 14:14:09,459 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:14:09,460 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:09,460 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:14:09,460 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:14:09,460 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:14:09,460 - INFO - Orçamento ID: 1209, Itens: 3
+2025-12-15 14:14:13,254 - INFO - Status da resposta: 200
+2025-12-15 14:14:13,254 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1209
+2025-12-15 14:14:13,255 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1209
+2025-12-15 14:14:13,255 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:14:13,255 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:14:13,255 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:13,255 - INFO - 
+================================================================================
+2025-12-15 14:14:13,255 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:14:13,255 - INFO - ================================================================================
+2025-12-15 14:14:14,256 - INFO - 
+================================================================================
+2025-12-15 14:14:14,256 - INFO - ITEM 18/36
+2025-12-15 14:14:14,256 - INFO - ================================================================================
+2025-12-15 14:14:14,256 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:14:14,256 - INFO - ================================================================================
+2025-12-15 14:14:14,257 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:14:14,257 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:14:14,257 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:14:15,840 - INFO - Status da resposta: 200
+2025-12-15 14:14:15,841 - INFO - ✓ Orçamento criado com sucesso - ID: 1210
+2025-12-15 14:14:15,841 - INFO - [OK] Orcamento criado na API - ID: 1210
+2025-12-15 14:14:15,841 - INFO - [OK] Total de itens: 3
+2025-12-15 14:14:15,841 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:14:15,841 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:15,841 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:14:15,842 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:14:15,842 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:14:15,842 - INFO - Orçamento ID: 1210, Itens: 3
+2025-12-15 14:14:19,648 - INFO - Status da resposta: 200
+2025-12-15 14:14:19,648 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1210
+2025-12-15 14:14:19,649 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1210
+2025-12-15 14:14:19,649 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:14:19,649 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:14:19,649 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:19,649 - INFO - 
+================================================================================
+2025-12-15 14:14:19,649 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:14:19,649 - INFO - ================================================================================
+2025-12-15 14:14:20,650 - INFO - 
+================================================================================
+2025-12-15 14:14:20,650 - INFO - ITEM 19/36
+2025-12-15 14:14:20,651 - INFO - ================================================================================
+2025-12-15 14:14:20,651 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:14:20,651 - INFO - ================================================================================
+2025-12-15 14:14:20,651 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:14:20,651 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:14:20,651 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:14:22,238 - INFO - Status da resposta: 200
+2025-12-15 14:14:22,238 - INFO - ✓ Orçamento criado com sucesso - ID: 1211
+2025-12-15 14:14:22,238 - INFO - [OK] Orcamento criado na API - ID: 1211
+2025-12-15 14:14:22,238 - INFO - [OK] Total de itens: 3
+2025-12-15 14:14:22,239 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:14:22,239 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:22,239 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:14:22,239 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:14:22,239 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:14:22,239 - INFO - Orçamento ID: 1211, Itens: 3
+2025-12-15 14:14:26,032 - INFO - Status da resposta: 200
+2025-12-15 14:14:26,032 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1211
+2025-12-15 14:14:26,032 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1211
+2025-12-15 14:14:26,033 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:14:26,033 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:14:26,033 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:26,033 - INFO - 
+================================================================================
+2025-12-15 14:14:26,033 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:14:26,033 - INFO - ================================================================================
+2025-12-15 14:14:27,033 - INFO - 
+================================================================================
+2025-12-15 14:14:27,034 - INFO - ITEM 20/36
+2025-12-15 14:14:27,034 - INFO - ================================================================================
+2025-12-15 14:14:27,034 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:14:27,034 - INFO - ================================================================================
+2025-12-15 14:14:27,034 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:14:27,034 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:14:27,035 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:14:28,294 - INFO - Status da resposta: 200
+2025-12-15 14:14:28,294 - INFO - ✓ Orçamento criado com sucesso - ID: 1212
+2025-12-15 14:14:28,294 - INFO - [OK] Orcamento criado na API - ID: 1212
+2025-12-15 14:14:28,295 - INFO - [OK] Total de itens: 2
+2025-12-15 14:14:28,295 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:14:28,295 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:28,295 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:14:28,295 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:14:28,295 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:14:28,295 - INFO - Orçamento ID: 1212, Itens: 2
+2025-12-15 14:14:31,162 - INFO - Status da resposta: 200
+2025-12-15 14:14:31,162 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1212
+2025-12-15 14:14:31,162 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1212
+2025-12-15 14:14:31,162 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:14:31,162 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:14:31,163 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:31,163 - INFO - 
+================================================================================
+2025-12-15 14:14:31,163 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:14:31,163 - INFO - ================================================================================
+2025-12-15 14:14:32,163 - INFO - 
+================================================================================
+2025-12-15 14:14:32,164 - INFO - ITEM 21/36
+2025-12-15 14:14:32,164 - INFO - ================================================================================
+2025-12-15 14:14:32,164 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:14:32,164 - INFO - ================================================================================
+2025-12-15 14:14:32,164 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:14:32,164 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:14:32,164 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:14:33,726 - INFO - Status da resposta: 200
+2025-12-15 14:14:33,727 - INFO - ✓ Orçamento criado com sucesso - ID: 1213
+2025-12-15 14:14:33,727 - INFO - [OK] Orcamento criado na API - ID: 1213
+2025-12-15 14:14:33,727 - INFO - [OK] Total de itens: 3
+2025-12-15 14:14:33,727 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:14:33,727 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:33,727 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:14:33,728 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:14:33,728 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:14:33,728 - INFO - Orçamento ID: 1213, Itens: 3
+2025-12-15 14:14:37,504 - INFO - Status da resposta: 200
+2025-12-15 14:14:37,505 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1213
+2025-12-15 14:14:37,505 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1213
+2025-12-15 14:14:37,505 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:14:37,505 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:14:37,505 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:37,505 - INFO - 
+================================================================================
+2025-12-15 14:14:37,506 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:14:37,506 - INFO - ================================================================================
+2025-12-15 14:14:38,506 - INFO - 
+================================================================================
+2025-12-15 14:14:38,506 - INFO - ITEM 22/36
+2025-12-15 14:14:38,507 - INFO - ================================================================================
+2025-12-15 14:14:38,507 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:14:38,507 - INFO - ================================================================================
+2025-12-15 14:14:38,507 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:14:38,507 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:14:38,507 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:14:39,437 - INFO - Status da resposta: 200
+2025-12-15 14:14:39,438 - INFO - ✓ Orçamento criado com sucesso - ID: 1214
+2025-12-15 14:14:39,438 - INFO - [OK] Orcamento criado na API - ID: 1214
+2025-12-15 14:14:39,438 - INFO - [OK] Total de itens: 1
+2025-12-15 14:14:39,438 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:14:39,438 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:39,438 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:14:39,439 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:14:39,439 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:14:39,439 - INFO - Orçamento ID: 1214, Itens: 1
+2025-12-15 14:14:41,386 - INFO - Status da resposta: 200
+2025-12-15 14:14:41,386 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1214
+2025-12-15 14:14:41,386 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1214
+2025-12-15 14:14:41,386 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:14:41,387 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:14:41,387 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:41,387 - INFO - 
+================================================================================
+2025-12-15 14:14:41,387 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:14:41,387 - INFO - ================================================================================
+2025-12-15 14:14:42,388 - INFO - 
+================================================================================
+2025-12-15 14:14:42,388 - INFO - ITEM 23/36
+2025-12-15 14:14:42,388 - INFO - ================================================================================
+2025-12-15 14:14:42,388 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:14:42,388 - INFO - ================================================================================
+2025-12-15 14:14:42,388 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:14:42,389 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:14:42,389 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:14:43,946 - INFO - Status da resposta: 200
+2025-12-15 14:14:43,947 - INFO - ✓ Orçamento criado com sucesso - ID: 1215
+2025-12-15 14:14:43,947 - INFO - [OK] Orcamento criado na API - ID: 1215
+2025-12-15 14:14:43,947 - INFO - [OK] Total de itens: 3
+2025-12-15 14:14:43,947 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:14:43,947 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:43,947 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:14:43,947 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:14:43,947 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:14:43,948 - INFO - Orçamento ID: 1215, Itens: 3
+2025-12-15 14:14:47,738 - INFO - Status da resposta: 200
+2025-12-15 14:14:47,739 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1215
+2025-12-15 14:14:47,739 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1215
+2025-12-15 14:14:47,739 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:14:47,739 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:14:47,739 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:47,739 - INFO - 
+================================================================================
+2025-12-15 14:14:47,740 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:14:47,740 - INFO - ================================================================================
+2025-12-15 14:14:48,740 - INFO - 
+================================================================================
+2025-12-15 14:14:48,740 - INFO - ITEM 24/36
+2025-12-15 14:14:48,741 - INFO - ================================================================================
+2025-12-15 14:14:48,741 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:14:48,741 - INFO - ================================================================================
+2025-12-15 14:14:48,741 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:14:48,741 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:14:48,741 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:14:50,302 - INFO - Status da resposta: 200
+2025-12-15 14:14:50,303 - INFO - ✓ Orçamento criado com sucesso - ID: 1216
+2025-12-15 14:14:50,303 - INFO - [OK] Orcamento criado na API - ID: 1216
+2025-12-15 14:14:50,303 - INFO - [OK] Total de itens: 3
+2025-12-15 14:14:50,303 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:14:50,303 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:50,303 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:14:50,304 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:14:50,304 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:14:50,304 - INFO - Orçamento ID: 1216, Itens: 3
+2025-12-15 14:14:54,113 - INFO - Status da resposta: 200
+2025-12-15 14:14:54,113 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1216
+2025-12-15 14:14:54,114 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1216
+2025-12-15 14:14:54,114 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:14:54,114 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:14:54,114 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:54,114 - INFO - 
+================================================================================
+2025-12-15 14:14:54,114 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:14:54,114 - INFO - ================================================================================
+2025-12-15 14:14:55,115 - INFO - 
+================================================================================
+2025-12-15 14:14:55,115 - INFO - ITEM 25/36
+2025-12-15 14:14:55,115 - INFO - ================================================================================
+2025-12-15 14:14:55,116 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:14:55,116 - INFO - ================================================================================
+2025-12-15 14:14:55,116 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:14:55,116 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:14:55,116 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:14:56,698 - INFO - Status da resposta: 200
+2025-12-15 14:14:56,698 - INFO - ✓ Orçamento criado com sucesso - ID: 1217
+2025-12-15 14:14:56,698 - INFO - [OK] Orcamento criado na API - ID: 1217
+2025-12-15 14:14:56,699 - INFO - [OK] Total de itens: 3
+2025-12-15 14:14:56,699 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:14:56,699 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:14:56,699 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:14:56,699 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:14:56,699 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:14:56,699 - INFO - Orçamento ID: 1217, Itens: 3
+2025-12-15 14:15:00,479 - INFO - Status da resposta: 200
+2025-12-15 14:15:00,480 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1217
+2025-12-15 14:15:00,480 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1217
+2025-12-15 14:15:00,480 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:15:00,480 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:15:00,480 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:00,480 - INFO - 
+================================================================================
+2025-12-15 14:15:00,481 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:15:00,481 - INFO - ================================================================================
+2025-12-15 14:15:01,481 - INFO - 
+================================================================================
+2025-12-15 14:15:01,481 - INFO - ITEM 26/36
+2025-12-15 14:15:01,482 - INFO - ================================================================================
+2025-12-15 14:15:01,482 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:15:01,482 - INFO - ================================================================================
+2025-12-15 14:15:01,482 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:15:01,482 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:15:01,482 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:15:02,735 - INFO - Status da resposta: 200
+2025-12-15 14:15:02,735 - INFO - ✓ Orçamento criado com sucesso - ID: 1218
+2025-12-15 14:15:02,735 - INFO - [OK] Orcamento criado na API - ID: 1218
+2025-12-15 14:15:02,736 - INFO - [OK] Total de itens: 2
+2025-12-15 14:15:02,736 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:15:02,736 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:02,736 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:15:02,736 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:15:02,736 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:15:02,736 - INFO - Orçamento ID: 1218, Itens: 2
+2025-12-15 14:15:05,631 - INFO - Status da resposta: 200
+2025-12-15 14:15:05,632 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1218
+2025-12-15 14:15:05,632 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1218
+2025-12-15 14:15:05,632 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:15:05,632 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:15:05,632 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:05,632 - INFO - 
+================================================================================
+2025-12-15 14:15:05,633 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:15:05,633 - INFO - ================================================================================
+2025-12-15 14:15:06,633 - INFO - 
+================================================================================
+2025-12-15 14:15:06,634 - INFO - ITEM 27/36
+2025-12-15 14:15:06,634 - INFO - ================================================================================
+2025-12-15 14:15:06,634 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:15:06,634 - INFO - ================================================================================
+2025-12-15 14:15:06,634 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:15:06,634 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:15:06,635 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:15:07,567 - INFO - Status da resposta: 200
+2025-12-15 14:15:07,567 - INFO - ✓ Orçamento criado com sucesso - ID: 1219
+2025-12-15 14:15:07,567 - INFO - [OK] Orcamento criado na API - ID: 1219
+2025-12-15 14:15:07,567 - INFO - [OK] Total de itens: 1
+2025-12-15 14:15:07,567 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:15:07,567 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:07,568 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:15:07,568 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:15:07,568 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:15:07,568 - INFO - Orçamento ID: 1219, Itens: 1
+2025-12-15 14:15:09,526 - INFO - Status da resposta: 200
+2025-12-15 14:15:09,527 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1219
+2025-12-15 14:15:09,527 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1219
+2025-12-15 14:15:09,527 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:15:09,527 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:15:09,527 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:09,527 - INFO - 
+================================================================================
+2025-12-15 14:15:09,528 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:15:09,528 - INFO - ================================================================================
+2025-12-15 14:15:10,528 - INFO - 
+================================================================================
+2025-12-15 14:15:10,529 - INFO - ITEM 28/36
+2025-12-15 14:15:10,529 - INFO - ================================================================================
+2025-12-15 14:15:10,529 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:15:10,529 - INFO - ================================================================================
+2025-12-15 14:15:10,529 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:15:10,529 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:15:10,529 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:15:11,449 - INFO - Status da resposta: 200
+2025-12-15 14:15:11,450 - INFO - ✓ Orçamento criado com sucesso - ID: 1220
+2025-12-15 14:15:11,450 - INFO - [OK] Orcamento criado na API - ID: 1220
+2025-12-15 14:15:11,450 - INFO - [OK] Total de itens: 1
+2025-12-15 14:15:11,450 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:15:11,450 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:11,450 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:15:11,450 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:15:11,451 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:15:11,451 - INFO - Orçamento ID: 1220, Itens: 1
+2025-12-15 14:15:13,408 - INFO - Status da resposta: 200
+2025-12-15 14:15:13,408 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1220
+2025-12-15 14:15:13,408 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1220
+2025-12-15 14:15:13,408 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:15:13,409 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:15:13,409 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:13,409 - INFO - 
+================================================================================
+2025-12-15 14:15:13,409 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:15:13,409 - INFO - ================================================================================
+2025-12-15 14:15:14,410 - INFO - 
+================================================================================
+2025-12-15 14:15:14,410 - INFO - ITEM 29/36
+2025-12-15 14:15:14,410 - INFO - ================================================================================
+2025-12-15 14:15:14,410 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:15:14,410 - INFO - ================================================================================
+2025-12-15 14:15:14,411 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:15:14,411 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:15:14,411 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:15:15,971 - INFO - Status da resposta: 200
+2025-12-15 14:15:15,971 - INFO - ✓ Orçamento criado com sucesso - ID: 1221
+2025-12-15 14:15:15,971 - INFO - [OK] Orcamento criado na API - ID: 1221
+2025-12-15 14:15:15,971 - INFO - [OK] Total de itens: 3
+2025-12-15 14:15:15,971 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:15:15,972 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:15,972 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:15:15,972 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:15:15,972 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:15:15,972 - INFO - Orçamento ID: 1221, Itens: 3
+2025-12-15 14:15:19,784 - INFO - Status da resposta: 200
+2025-12-15 14:15:19,784 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1221
+2025-12-15 14:15:19,785 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1221
+2025-12-15 14:15:19,785 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:15:19,785 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:15:19,785 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:19,785 - INFO - 
+================================================================================
+2025-12-15 14:15:19,785 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:15:19,785 - INFO - ================================================================================
+2025-12-15 14:15:20,786 - INFO - 
+================================================================================
+2025-12-15 14:15:20,787 - INFO - ITEM 30/36
+2025-12-15 14:15:20,787 - INFO - ================================================================================
+2025-12-15 14:15:20,787 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:15:20,787 - INFO - ================================================================================
+2025-12-15 14:15:20,787 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:15:20,787 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:15:20,787 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:15:22,326 - INFO - Status da resposta: 200
+2025-12-15 14:15:22,326 - INFO - ✓ Orçamento criado com sucesso - ID: 1222
+2025-12-15 14:15:22,327 - INFO - [OK] Orcamento criado na API - ID: 1222
+2025-12-15 14:15:22,327 - INFO - [OK] Total de itens: 3
+2025-12-15 14:15:22,327 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:15:22,327 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:22,327 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:15:22,327 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:15:22,327 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:15:22,327 - INFO - Orçamento ID: 1222, Itens: 3
+2025-12-15 14:15:26,131 - INFO - Status da resposta: 200
+2025-12-15 14:15:26,131 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1222
+2025-12-15 14:15:26,131 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1222
+2025-12-15 14:15:26,131 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:15:26,132 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:15:26,132 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:26,132 - INFO - 
+================================================================================
+2025-12-15 14:15:26,132 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:15:26,132 - INFO - ================================================================================
+2025-12-15 14:15:27,132 - INFO - 
+================================================================================
+2025-12-15 14:15:27,133 - INFO - ITEM 31/36
+2025-12-15 14:15:27,133 - INFO - ================================================================================
+2025-12-15 14:15:27,133 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:15:27,133 - INFO - ================================================================================
+2025-12-15 14:15:27,133 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:15:27,133 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:15:27,134 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:15:28,685 - INFO - Status da resposta: 200
+2025-12-15 14:15:28,685 - INFO - ✓ Orçamento criado com sucesso - ID: 1223
+2025-12-15 14:15:28,685 - INFO - [OK] Orcamento criado na API - ID: 1223
+2025-12-15 14:15:28,685 - INFO - [OK] Total de itens: 3
+2025-12-15 14:15:28,685 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:15:28,685 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:28,686 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:15:28,686 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:15:28,686 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:15:28,686 - INFO - Orçamento ID: 1223, Itens: 3
+2025-12-15 14:15:32,540 - INFO - Status da resposta: 200
+2025-12-15 14:15:32,540 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1223
+2025-12-15 14:15:32,540 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1223
+2025-12-15 14:15:32,540 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:15:32,540 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:15:32,541 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:32,541 - INFO - 
+================================================================================
+2025-12-15 14:15:32,541 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:15:32,541 - INFO - ================================================================================
+2025-12-15 14:15:33,541 - INFO - 
+================================================================================
+2025-12-15 14:15:33,541 - INFO - ITEM 32/36
+2025-12-15 14:15:33,542 - INFO - ================================================================================
+2025-12-15 14:15:33,542 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:15:33,542 - INFO - ================================================================================
+2025-12-15 14:15:33,542 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:15:33,542 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:15:33,542 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:15:35,086 - INFO - Status da resposta: 200
+2025-12-15 14:15:35,087 - INFO - ✓ Orçamento criado com sucesso - ID: 1224
+2025-12-15 14:15:35,087 - INFO - [OK] Orcamento criado na API - ID: 1224
+2025-12-15 14:15:35,087 - INFO - [OK] Total de itens: 3
+2025-12-15 14:15:35,087 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:15:35,088 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:35,088 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:15:35,088 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:15:35,088 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:15:35,088 - INFO - Orçamento ID: 1224, Itens: 3
+2025-12-15 14:15:38,997 - INFO - Status da resposta: 200
+2025-12-15 14:15:38,997 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1224
+2025-12-15 14:15:38,998 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1224
+2025-12-15 14:15:38,998 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:15:38,998 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:15:38,998 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:38,998 - INFO - 
+================================================================================
+2025-12-15 14:15:38,998 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:15:38,998 - INFO - ================================================================================
+2025-12-15 14:15:39,999 - INFO - 
+================================================================================
+2025-12-15 14:15:39,999 - INFO - ITEM 33/36
+2025-12-15 14:15:39,999 - INFO - ================================================================================
+2025-12-15 14:15:39,999 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:15:40,000 - INFO - ================================================================================
+2025-12-15 14:15:40,000 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:15:40,000 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:15:40,000 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:15:41,685 - INFO - Status da resposta: 200
+2025-12-15 14:15:41,686 - INFO - ✓ Orçamento criado com sucesso - ID: 1225
+2025-12-15 14:15:41,686 - INFO - [OK] Orcamento criado na API - ID: 1225
+2025-12-15 14:15:41,686 - INFO - [OK] Total de itens: 3
+2025-12-15 14:15:41,686 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:15:41,686 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:41,686 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:15:41,687 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:15:41,687 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:15:41,687 - INFO - Orçamento ID: 1225, Itens: 3
+2025-12-15 14:15:45,665 - INFO - Status da resposta: 200
+2025-12-15 14:15:45,666 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1225
+2025-12-15 14:15:45,666 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1225
+2025-12-15 14:15:45,666 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:15:45,666 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:15:45,667 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:45,667 - INFO - 
+================================================================================
+2025-12-15 14:15:45,667 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:15:45,667 - INFO - ================================================================================
+2025-12-15 14:15:46,667 - INFO - 
+================================================================================
+2025-12-15 14:15:46,756 - INFO - ITEM 34/36
+2025-12-15 14:15:46,756 - INFO - ================================================================================
+2025-12-15 14:15:46,756 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:15:46,756 - INFO - ================================================================================
+2025-12-15 14:15:46,757 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:15:46,757 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:15:46,757 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:15:48,437 - INFO - Status da resposta: 200
+2025-12-15 14:15:48,438 - INFO - ✓ Orçamento criado com sucesso - ID: 1226
+2025-12-15 14:15:48,438 - INFO - [OK] Orcamento criado na API - ID: 1226
+2025-12-15 14:15:48,438 - INFO - [OK] Total de itens: 3
+2025-12-15 14:15:48,438 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:15:48,438 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:48,439 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:15:48,439 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:15:48,439 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:15:48,439 - INFO - Orçamento ID: 1226, Itens: 3
+2025-12-15 14:15:52,409 - INFO - Status da resposta: 200
+2025-12-15 14:15:52,409 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1226
+2025-12-15 14:15:52,410 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1226
+2025-12-15 14:15:52,410 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:15:52,410 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:15:52,410 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:52,410 - INFO - 
+================================================================================
+2025-12-15 14:15:52,411 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:15:52,411 - INFO - ================================================================================
+2025-12-15 14:15:53,411 - INFO - 
+================================================================================
+2025-12-15 14:15:53,411 - INFO - ITEM 35/36
+2025-12-15 14:15:53,411 - INFO - ================================================================================
+2025-12-15 14:15:53,412 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:15:53,412 - INFO - ================================================================================
+2025-12-15 14:15:53,412 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:15:53,412 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:15:53,412 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:15:55,106 - INFO - Status da resposta: 200
+2025-12-15 14:15:55,106 - INFO - ✓ Orçamento criado com sucesso - ID: 1227
+2025-12-15 14:15:55,106 - INFO - [OK] Orcamento criado na API - ID: 1227
+2025-12-15 14:15:55,106 - INFO - [OK] Total de itens: 3
+2025-12-15 14:15:55,106 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:15:55,106 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:55,106 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:15:55,107 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:15:55,107 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:15:55,107 - INFO - Orçamento ID: 1227, Itens: 3
+2025-12-15 14:15:59,530 - INFO - Status da resposta: 200
+2025-12-15 14:15:59,530 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1227
+2025-12-15 14:15:59,530 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1227
+2025-12-15 14:15:59,530 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:15:59,531 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:15:59,531 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:15:59,531 - INFO - 
+================================================================================
+2025-12-15 14:15:59,531 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:15:59,531 - INFO - ================================================================================
+2025-12-15 14:16:00,532 - INFO - 
+================================================================================
+2025-12-15 14:16:00,532 - INFO - ITEM 36/36
+2025-12-15 14:16:00,532 - INFO - ================================================================================
+2025-12-15 14:16:00,532 - INFO - PROCESSANDO NOVO ORCAMENTO (MODO: NAO SALVAR NO BANCO)
+2025-12-15 14:16:00,533 - INFO - ================================================================================
+2025-12-15 14:16:00,533 - INFO - ✓ Payload de orçamento validado com sucesso
+2025-12-15 14:16:00,533 - INFO - 
+--- ETAPA 1: Criacao do Orcamento (API) ---
+2025-12-15 14:16:00,533 - INFO - Enviando requisição de criação de orçamento para http://192.168.1.10:9001/api/v1/orcamento
+2025-12-15 14:16:01,608 - INFO - Status da resposta: 200
+2025-12-15 14:16:01,608 - INFO - ✓ Orçamento criado com sucesso - ID: 1228
+2025-12-15 14:16:01,609 - INFO - [OK] Orcamento criado na API - ID: 1228
+2025-12-15 14:16:01,609 - INFO - [OK] Total de itens: 1
+2025-12-15 14:16:01,609 - INFO - 
+--- ETAPA 2: Salvamento do Orcamento ---
+2025-12-15 14:16:01,609 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:16:01,609 - INFO - 
+--- ETAPA 3: Preparacao da Aprovacao ---
+2025-12-15 14:16:01,609 - INFO - 
+--- ETAPA 4: Aprovacao da Proposta (API) ---
+2025-12-15 14:16:01,610 - INFO - Enviando requisição de aprovação de proposta para http://192.168.1.10:9001/api/v1/proposta/aprovar
+2025-12-15 14:16:01,610 - INFO - Orçamento ID: 1228, Itens: 1
+2025-12-15 14:16:03,726 - INFO - Status da resposta: 200
+2025-12-15 14:16:03,727 - INFO - ✓ Proposta aprovada com sucesso - Orçamento ID: 1228
+2025-12-15 14:16:03,727 - INFO - [OK] Proposta aprovada na API - Orcamento ID: 1228
+2025-12-15 14:16:03,727 - INFO - [OK] Dados retornados como Lista. Quantidade de registros: 1
+2025-12-15 14:16:03,727 - INFO - 
+--- ETAPA 5: Salvamento da Aprovacao ---
+2025-12-15 14:16:03,727 - INFO - >> SKIPPING: Salvamento no banco desativado conforme solicitado.
+2025-12-15 14:16:03,727 - INFO - 
+================================================================================
+2025-12-15 14:16:03,728 - INFO - [OK] ORCAMENTO PROCESSADO (SEM PERSISTENCIA)
+2025-12-15 14:16:03,728 - INFO - ================================================================================
+2025-12-15 14:16:04,728 - INFO - Conexão com banco de dados fechada
+2025-12-15 14:16:04,728 - INFO - 
+================================================================================
+2025-12-15 14:16:04,729 - INFO - FIM DO PROCESSAMENTO (MODO NO-DB-SAVE)
+2025-12-15 14:16:04,729 - INFO - Orcamentos criados (API): 36
+2025-12-15 14:16:04,729 - INFO - Propostas aprovadas (API): 36
+2025-12-15 14:16:04,729 - INFO - ================================================================================

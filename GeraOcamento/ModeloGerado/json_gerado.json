@@ -1,54 +1,44 @@
 {
     "identifier": "PageFlow",
     "data": {
-        "id_cliente": 2,
+        "id_cliente": 2258,
         "id_vendedor": 3,
         "id_forma_pagamento": "1",
         "itens": [
             {
-                "id_produto": 151,
-                "descricao": "processo_automacao_distribuicao_materiais | (#344)",
-                "quantidade": 3,
+                "id_produto": 229,
+                "descricao": "fr_grupo_salta_2026 (#361)",
+                "quantidade": 2040,
                 "usar_listapreco": 1,
                 "manter_estrutura_mod_produto": 1,
                 "componentes": [
                     {
-                        "id": 358,
-                        "altura": 10.50,
-                        "largura": 14.80,
-                        "descricao": "Capa PP Frente",
+                        "id": 483,
+                        "altura": 29.70,
+                        "largura": 21.00,
+                        "descricao": "Miolo",
                         "quantidade_paginas": 1,
-                        "perguntas_componente": []
-                    },
-                    {
-                        "id": 359,
-                        "altura": 10.50,
-                        "largura": 14.80,
-                        "descricao": "Miolo da Apostila",
-                        "quantidade_paginas": 2,
-                        "perguntas_componente": [
-                            {
-                                "tipo": "Opções",
-                                "pergunta": "Cor do Espiral?",
-                                "resposta": "Branco",
-                                "id_pergunta": 21
-                            },
-                            {
-                                "tipo": "Opções",
-                                "pergunta": "Borda de Encadernação?",
-                                "resposta": "Borda Menor",
-                                "id_pergunta": 37
-                            }
-                        ],
+                        "perguntas_componente": [],
                         "gramaturasubstratoimpressao": 75.00
-                    },
+                    }
+                ],
+                "perguntas_gerais": []
+            },
+            {
+                "id_produto": 230,
+                "descricao": "cr_grupo_salta_2026 (#362)",
+                "quantidade": 11440,
+                "usar_listapreco": 1,
+                "manter_estrutura_mod_produto": 1,
+                "componentes": [
                     {
-                        "id": 360,
-                        "altura": 10.50,
-                        "largura": 14.80,
-                        "descricao": "Capa PP Verso",
+                        "id": 484,
+                        "altura": 29.70,
+                        "largura": 21.00,
+                        "descricao": "Miolo",
                         "quantidade_paginas": 1,
-                        "perguntas_componente": []
+                        "perguntas_componente": [],
+                        "gramaturasubstratoimpressao": 75.00
                     }
                 ],
                 "perguntas_gerais": []
