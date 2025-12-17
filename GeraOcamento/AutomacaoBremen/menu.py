@@ -1,7 +1,7 @@
 """
 Script interativo para facilitar o uso do sistema
 """
-from app import processar_formulario
+from DESKFLOW.app import processar_formulario
 import sys
 
 

@@ -5,7 +5,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox, scrolledtext
 import threading
 import sys
-from app import processar_formulario
+from DESKFLOW.app import processar_formulario
 
 
 class BremenGUI:
