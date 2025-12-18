@@ -1,67 +1,72 @@
-{
-    "identifier": "PageFlow",
-    "data": {
-        "id_cliente": 331,
-        "id_vendedor": 3,
-        "id_forma_pagamento": "1",
-        "itens": [
+[
+    {
+        "produtos": [
             {
-                "id_produto": 229,
-                "descricao": "fr_grupo_salta_2026 (#361)",
-                "quantidade": 13180,
-                "usar_listapreco": 1,
-                "manter_estrutura_mod_produto": 1,
-                "componentes": [
+                "datas": [
                     {
-                        "id": 483,
-                        "altura": 29.70,
-                        "largura": 21.00,
-                        "descricao": "Miolo",
-                        "quantidade_paginas": 1,
-                        "perguntas_componente": [],
-                        "gramaturasubstratoimpressao": 75.00
+                        "arquivos": [
+                            {
+                                "copias": 4,
+                                "arquivo": "ILOVEPDF_MERGED.PDF",
+                                "paginas": 4
+                            },
+                            {
+                                "copias": 43,
+                                "arquivo": "ILOVEPDF_MERGED.PDF",
+                                "paginas": 4
+                            },
+                            {
+                                "copias": 4,
+                                "arquivo": "PAG_FOX_-_PAG_-_0812.PDF",
+                                "paginas": 1
+                            },
+                            {
+                                "copias": 43,
+                                "arquivo": "PAG_FOX_-_PAG_-_0812.PDF",
+                                "paginas": 1
+                            }
+                        ],
+                        "data_saida": "2025-12-23",
+                        "quantidade": 4
                     }
                 ],
-                "perguntas_gerais": []
-            },
-            {
-                "id_produto": 230,
-                "descricao": "cr_grupo_salta_2026 (#362)",
-                "quantidade": 13180,
-                "usar_listapreco": 1,
-                "manter_estrutura_mod_produto": 1,
-                "componentes": [
-                    {
-                        "id": 484,
-                        "altura": 29.70,
-                        "largura": 21.00,
-                        "descricao": "Miolo",
-                        "quantidade_paginas": 1,
-                        "perguntas_componente": [],
-                        "gramaturasubstratoimpressao": 75.00
-                    }
-                ],
-                "perguntas_gerais": []
-            },
-            {
-                "id_produto": 227,
-                "descricao": "cr_pas_2026 (#363)",
-                "quantidade": 13180,
-                "usar_listapreco": 1,
-                "manter_estrutura_mod_produto": 1,
-                "componentes": [
-                    {
-                        "id": 481,
-                        "altura": 29.70,
-                        "largura": 21.00,
-                        "descricao": "Miolo",
-                        "quantidade_paginas": 1,
-                        "perguntas_componente": [],
-                        "gramaturasubstratoimpressao": 75.00
-                    }
-                ],
-                "perguntas_gerais": []
+                "produto": "Prova Simples 75/90g (Miolo Colorido)",
+                "id_produto": 108,
+                "quantidade": 4
             }
-        ]
+        ],
+        "dias_uteis": "1",
+        "quantidade_total": 4,
+        "divisao_logistica": "PT1"
+    },
+    {
+        "produtos": [
+            {
+                "datas": [
+                    {
+                        "arquivos": [
+                            {
+                                "copias": 34,
+                                "arquivo": "ILOVEPDF_MERGED.PDF",
+                                "paginas": 4
+                            },
+                            {
+                                "copias": 34,
+                                "arquivo": "PAG_FOX_-_PAG_-_0812.PDF",
+                                "paginas": 1
+                            }
+                        ],
+                        "data_saida": "2025-12-17",
+                        "quantidade": 2
+                    }
+                ],
+                "produto": "Prova Simples 75/90g (Miolo Colorido)",
+                "id_produto": 108,
+                "quantidade": 2
+            }
+        ],
+        "dias_uteis": "5",
+        "quantidade_total": 2,
+        "divisao_logistica": "TRANSPORTADORA"
     }
-}
+]

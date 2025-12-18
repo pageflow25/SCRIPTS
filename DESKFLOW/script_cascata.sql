@@ -1,3 +1,4 @@
+-- database: :memory:
 WITH dados_normalizados AS (
     SELECT
         -- TRATAMENTO DE NULOS

@@ -50,7 +50,7 @@ WITH dados_normalizados AS (
         ON distri.unidade_escolar_id = uc.id
     INNER JOIN bremen_itens b 
         ON e.id_produto = b.id_produto
-    WHERE UPPER(f.tipo_formulario) = UPPER('santa catarina')
+    WHERE UPPER(f.tipo_formulario) = UPPER('SANTA CATARINA')
 ),
 
 -- NÍVEL 4: ARQUIVOS
