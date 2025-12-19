@@ -5,8 +5,8 @@
 WITH parametros AS (
     SELECT
         15 AS escola_id,                 
-        ARRAY[227, 228, 229, 230] AS ids_produtos, -- <--- ALTERADO PARA ARRAY (Ex: ARRAY[227, 228, 300])
-        ARRAY['2025-12-19', '2025-12-29', '2025-12-31', '2026-01-06']::date[] AS datas_saida
+        ARRAY[] AS ids_produtos, -- <--- ALTERADO PARA ARRAY (Ex: ARRAY[227, 228, 300])
+        ARRAY[]::date[] AS datas_saida
 ),
 
 unidades_filtradas AS (
