@@ -17,7 +17,7 @@ def main(argv=None):
 						help='Base URL for API (default from BREMEN_BASE_URL or http://dominio)')
 	# Default token provided by the user; can still be overridden via --token or BREMEN_TOKEN
 	parser.add_argument('--token', '-t', default=os.environ.get('BREMEN_TOKEN',
-						'ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SjFjM1ZoY21sdklqb2ljR0ZuWldac2IzY2lMQ0p1ZFcxbGNtOWZjMlZ5YVdVaU9pSXdNemc1TWlJc0ltVjRjQ0k2TVRjMk1qTTFORGczTkgwLjc1X0x1eUZ0ZWNLdk1meWtsaEJHOTNOTW5XY2V0ak5YejNCSWcwbTROZkk='),
+						'ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SjFjM1ZoY21sdklqb2ljR0ZuWldac2IzY2lMQ0p1ZFcxbGNtOWZjMlZ5YVdVaU9pSXdNemc1TWlJc0ltVjRjQ0k2TVRjMk5qRTNNVEEzTjMwLkZqTXBhbUVUcExDbEFyVmNMUG16M1Nkemk0ZVVKMjA2OW1XWF9QaHF2TzA='),
 						help='API token (required). Can be set via --token or BREMEN_TOKEN env var')
 	# origem is required by the API but default to 1 (Produto Acabado) so the script can be run without args
 	parser.add_argument('--origem', type=int, default=2, choices=[1, 2],

@@ -1,72 +1,23 @@
-[
-    {
-        "produtos": [
+{
+    "identifier": "PageFlow",
+
+    "data": {
+        "id_orcamento": 1379,
+        "gerar_op": True,
+        "itens": [
             {
-                "datas": [
-                    {
-                        "arquivos": [
-                            {
-                                "copias": 4,
-                                "arquivo": "ILOVEPDF_MERGED.PDF",
-                                "paginas": 4
-                            },
-                            {
-                                "copias": 43,
-                                "arquivo": "ILOVEPDF_MERGED.PDF",
-                                "paginas": 4
-                            },
-                            {
-                                "copias": 4,
-                                "arquivo": "PAG_FOX_-_PAG_-_0812.PDF",
-                                "paginas": 1
-                            },
-                            {
-                                "copias": 43,
-                                "arquivo": "PAG_FOX_-_PAG_-_0812.PDF",
-                                "paginas": 1
-                            }
-                        ],
-                        "data_saida": "2025-12-23",
-                        "quantidade": 4
-                    }
-                ],
-                "produto": "Prova Simples 75/90g (Miolo Colorido)",
-                "id_produto": 108,
-                "quantidade": 4
-            }
-        ],
-        "dias_uteis": "1",
-        "quantidade_total": 4,
-        "divisao_logistica": "PT1"
-    },
-    {
-        "produtos": [
+                "id": 20178,
+                "data_entrega": "2025-12-24T12:00:00.000-03:00"
+
+            },
             {
-                "datas": [
-                    {
-                        "arquivos": [
-                            {
-                                "copias": 34,
-                                "arquivo": "ILOVEPDF_MERGED.PDF",
-                                "paginas": 4
-                            },
-                            {
-                                "copias": 34,
-                                "arquivo": "PAG_FOX_-_PAG_-_0812.PDF",
-                                "paginas": 1
-                            }
-                        ],
-                        "data_saida": "2025-12-17",
-                        "quantidade": 2
-                    }
-                ],
-                "produto": "Prova Simples 75/90g (Miolo Colorido)",
-                "id_produto": 108,
-                "quantidade": 2
+                "id": 20179,
+                "data_entrega": "2025-12-24T12:00:00.000-03:00"
+            },
+            {
+                "id": 20180,
+                "data_entrega": "2025-12-24T12:00:00.000-03:00"
             }
-        ],
-        "dias_uteis": "5",
-        "quantidade_total": 2,
-        "divisao_logistica": "TRANSPORTADORA"
+        ]
     }
-]
+}
