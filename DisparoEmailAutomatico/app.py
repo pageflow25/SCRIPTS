@@ -1,14 +1,21 @@
-import smtplib
 import os
+import base64
 from email.message import EmailMessage
+from google.oauth2.credentials import Credentials
+from googleapiclient.discovery import build
+from dotenv import load_dotenv
+
+# Carregar variáveis de ambiente
+load_dotenv()
 
 # ==============================
-# CONFIGURAÇÃO SMTP
+# CONFIGURAÇÃO GMAIL API
 # ==============================
-SMTP_HOST = "smtp.gmail.com"
-SMTP_PORT = 587
-SMTP_USER = "pageflow.casadagrafica@gmail.com"
-SMTP_PASS = "utvwxlxdfxxdisbc"
+GMAIL_CLIENT_ID = os.getenv("GMAIL_CLIENT_ID")
+GMAIL_CLIENT_SECRET = os.getenv("GMAIL_CLIENT_SECRET")
+GMAIL_REFRESH_TOKEN = os.getenv("GMAIL_REFRESH_TOKEN")
+GMAIL_USER = os.getenv("GMAIL_USER")
+EMAIL_ENABLED = os.getenv("EMAIL_ENABLED", "true").lower() == "true"
 
 # ==============================
 # CONFIGURAÇÃO DO E-MAIL
@@ -276,16 +283,40 @@ emails = list({
 print(f"📧 Total de e-mails únicos: {len(emails)}")
 
 # ==============================
+# FUNÇÃO PARA CRIAR SERVIÇO GMAIL
+# ==============================
+def criar_servico_gmail():
+    """Cria e retorna o serviço da Gmail API usando OAuth2"""
+    creds = Credentials(
+        token=None,
+        refresh_token=GMAIL_REFRESH_TOKEN,
+        token_uri="https://oauth2.googleapis.com/token",
+        client_id=GMAIL_CLIENT_ID,
+        client_secret=GMAIL_CLIENT_SECRET,
+        scopes=["https://www.googleapis.com/auth/gmail.send"]
+    )
+    
+    service = build('gmail', 'v1', credentials=creds)
+    return service
+
+# ==============================
 # FUNÇÃO DE ENVIO
 # ==============================
 def enviar_email(destinatario):
+    """Envia e-mail usando a Gmail API"""
+    if not EMAIL_ENABLED:
+        print(f"⏭️ Envio desabilitado - {destinatario}")
+        return
+    
+    # Criar mensagem
     msg = EmailMessage()
-    msg["From"] = SMTP_USER
+    msg["From"] = GMAIL_USER
     msg["To"] = destinatario
     msg["Subject"] = ASSUNTO
     msg.set_content("Seu cliente de e-mail não suporta HTML.")
     msg.add_alternative(HTML_BODY, subtype="html")
 
+    # Adicionar anexo se existir
     if os.path.exists(ARQUIVO_ANEXO):
         with open(ARQUIVO_ANEXO, "rb") as f:
             msg.add_attachment(
@@ -294,11 +325,18 @@ def enviar_email(destinatario):
                 subtype="pdf",
                 filename=os.path.basename(ARQUIVO_ANEXO)
             )
-
-    with smtplib.SMTP(SMTP_HOST, SMTP_PORT) as server:
-        server.starttls()
-        server.login(SMTP_USER, SMTP_PASS)
-        server.send_message(msg)
+    
+    # Codificar mensagem em base64
+    raw_message = base64.urlsafe_b64encode(msg.as_bytes()).decode('utf-8')
+    
+    # Enviar via Gmail API
+    service = criar_servico_gmail()
+    message = service.users().messages().send(
+        userId='me',
+        body={'raw': raw_message}
+    ).execute()
+    
+    return message
 
 # ==============================
 # DISPARO INDIVIDUAL
